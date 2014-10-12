@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Northwind.Core.Domain
+﻿namespace Northwind.Core.Domain
 {
-    class Shipper
+    public class Shipper
     {
+        public virtual int Id { get; protected internal set; }
+
+        public virtual string Name { get; set; }
+
+        public virtual Phonenumber Phonenumber { get; set; }
     }
 }

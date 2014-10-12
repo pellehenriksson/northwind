@@ -1,12 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Northwind.Core.Domain
 {
-    class Employee
+    public class Employee
     {
+        public virtual int Id { get; protected internal set; }
+
+        public virtual string Name { get; set; }
+
+        public virtual string Title { get; set; }
+
+        public virtual DateTime Born { get; set; }
+
+        public virtual DateTime Hired { get; set; }
+
+        public virtual string Notes { get; set; }
+
+        public virtual Employee ReportsTo { get; set; }
+
+        public virtual IList<Territory> Territories { get; set; }
     }
 }

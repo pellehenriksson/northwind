@@ -61,7 +61,10 @@
     <Compile Include="AbstractIntegrationTestBase.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\CategoryMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\ProductMapTests.cs" />
+    <Compile Include="Core\Infrastructure\Persistance\Mappings\RegionMapTests.cs" />
+    <Compile Include="Core\Infrastructure\Persistance\Mappings\ShipperMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\SupplierMapTests.cs" />
+    <Compile Include="Core\Infrastructure\Persistance\Mappings\TerritoryMapTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

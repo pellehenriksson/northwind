@@ -4,15 +4,17 @@ using Northwind.Core.Domain;
 
 namespace Northwind.Core.Infrastructure.Persistance.Mappings
 {
-    public class CategoryMap : ClassMap<Category>
+    public class TerritoryMap : ClassMap<Territory>
     {
-        public CategoryMap()
+        public TerritoryMap()
         {
-            this.Table("Categories");
+            this.Table("Territories");
 
             this.Id(x => x.Id).GeneratedBy.Identity();
             this.Map(x => x.Name).Length(15).Not.Nullable();
-            this.Map(x => x.Description).CustomSqlType("ntext").Nullable();
+            this.References(x => x.Region).Not.Nullable()
+                .Index("ix_territory_region")
+                .ForeignKey("fk_region");
         }
     }
 }
