@@ -11,7 +11,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
         [Fact]
         public void Should_Map_Territory()
         {
-            var region = new Region { Name = "some region" };
+            var region = Region.Create("name");
             
             using (var session = SessionFactory.OpenSession())
             {

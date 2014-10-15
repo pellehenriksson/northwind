@@ -68,6 +68,7 @@
     <Compile Include="Domain\Shipper.cs" />
     <Compile Include="Domain\Supplier.cs" />
     <Compile Include="Domain\Territory.cs" />
+    <Compile Include="Infrastructure\Persistance\Mappings\AddressMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\CustomerMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\EmployeeMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\CategoryMap.cs" />

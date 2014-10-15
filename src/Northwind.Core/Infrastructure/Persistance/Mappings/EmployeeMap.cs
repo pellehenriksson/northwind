@@ -24,6 +24,8 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
                     .ForeignKey("fk_employee_employee");
 
             this.HasManyToMany(x => x.Territories).Table("EmployeesTerritories");
+
+            this.Component(x => x.Address).ColumnPrefix("Address");
         }
     }
 }

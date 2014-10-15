@@ -14,8 +14,8 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
             using (var session = SessionFactory.OpenSession())
             {
                 new PersistenceSpecification<Category>(session)
-                   .CheckProperty(x => x.Name, "some name")
-                   .CheckProperty(x => x.Description, "some description")
+                   .CheckProperty(x => x.Name, "name")
+                   .CheckProperty(x => x.Description, "description")
                    .VerifyTheMappings();
             }
         }

@@ -12,6 +12,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
 
             this.Id(x => x.Id).GeneratedBy.Identity();
             this.Map(x => x.Name).Length(15).Not.Nullable();
+            
             this.References(x => x.Region).Not.Nullable()
                 .Index("ix_territory_region")
                 .ForeignKey("fk_region");

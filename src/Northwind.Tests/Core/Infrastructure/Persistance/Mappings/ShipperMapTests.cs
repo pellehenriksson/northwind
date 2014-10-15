@@ -13,9 +13,10 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
         {
             using (var session = SessionFactory.OpenSession())
             {
+                var phone = new Phonenumber("extension", "12345");
+                
                 new PersistenceSpecification<Shipper>(session)
                    .CheckProperty(x => x.Name, "some name")
-                   .CheckProperty(x => x.Phone, "some phone")
                    .VerifyTheMappings();
             }
         }

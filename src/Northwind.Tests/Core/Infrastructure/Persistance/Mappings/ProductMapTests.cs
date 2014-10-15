@@ -11,7 +11,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
         [Fact]
         public void Should_Map_Product()
         {
-            var category = new Category { Name = "some category" };
+            var category = Category.Create("name", "description");
             var supplier = new Supplier { Name = "some supplier" };
             
             using (var session = SessionFactory.OpenSession())

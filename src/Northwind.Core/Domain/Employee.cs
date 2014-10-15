@@ -15,6 +15,8 @@ namespace Northwind.Core.Domain
 
         public virtual DateTime Hired { get; set; }
 
+        public virtual Address Address { get; set; }
+
         public virtual string Notes { get; set; }
 
         public virtual Employee ReportsTo { get; set; }

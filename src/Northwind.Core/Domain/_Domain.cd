@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Northwind.Core.Domain.Region">
-    <Position X="1" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAgAAAAAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Region.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Northwind.Core.Domain.Territory">
-    <Position X="0.75" Y="2.5" Width="1.5" />
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Territory.cs</FileName>
@@ -18,9 +18,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Shipper">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="4" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAQAAAAAAAAAgAAAQAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Shipper.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -28,24 +28,25 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Supplier">
-    <Position X="5.75" Y="2.75" Width="1.5" />
+    <Position X="5.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAQAQAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Supplier.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Property Name="Address" />
       <Property Name="Phonenumber" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Category">
-    <Position X="9" Y="3.5" Width="1.5" />
+    <Position X="10.75" Y="3" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAAAAgAAAAAQACAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Category.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Northwind.Core.Domain.Product">
-    <Position X="7.25" Y="6" Width="1.5" />
+    <Position X="7" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEACAAAAAQAAAIAAAAAAQAQAAAAACAACAAAAAAAACAA=</HashCode>
       <FileName>Domain\Product.cs</FileName>
@@ -56,20 +57,13 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Employee">
-    <Position X="1.25" Y="4.5" Width="2.5" />
-    <AssociationLine Name="ReportsTo" Type="Northwind.Core.Domain.Employee" ManuallyRouted="true">
-      <Path>
-        <Point X="2.133" Y="6.565" />
-        <Point X="2.133" Y="8.966" />
-        <Point X="2.885" Y="8.966" />
-        <Point X="2.885" Y="6.565" />
-      </Path>
-    </AssociationLine>
+    <Position X="0.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAiAAAAAAAAAEAIAAAAAAQAAAAAgIEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAiAAAAAAAAAEAIAAAAAAQAAAAAgIECAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Employee.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Property Name="Address" />
       <Property Name="ReportsTo" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
@@ -77,10 +71,17 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Phonenumber">
-    <Position X="8.25" Y="1.25" Width="1.5" />
+    <Position X="10.75" Y="0.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Phonenumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Northwind.Core.Domain.Address">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAIIAAAAAAAAAIAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Domain\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -14,6 +14,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Map(x => x.Name).Length(40).Not.Nullable();
 
             this.Component(x => x.Phonenumber).ColumnPrefix("Phonenumber");
+            this.Component(x => x.Address).ColumnPrefix("Address");
         }
     }
 }
