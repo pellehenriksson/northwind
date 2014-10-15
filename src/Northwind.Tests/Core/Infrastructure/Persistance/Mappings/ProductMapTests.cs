@@ -12,7 +12,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
         public void Should_Map_Product()
         {
             var category = Category.Create("name", "description");
-            var supplier = new Supplier { Name = "some supplier" };
+            var supplier = Supplier.Create("suppliername", new Address(), new Phonenumber("mob", "1234567"));
             
             using (var session = SessionFactory.OpenSession())
             {

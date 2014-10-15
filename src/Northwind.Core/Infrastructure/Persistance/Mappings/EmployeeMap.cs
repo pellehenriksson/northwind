@@ -14,8 +14,8 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
 
             this.Map(x => x.Name).Not.Nullable();
             this.Map(x => x.Title).Not.Nullable();
-            this.Map(x => x.Born).Not.Nullable();
-            this.Map(x => x.Hired).Not.Nullable();
+            this.Map(x => x.DayOfBirth).Not.Nullable();
+            this.Map(x => x.HiredDate).Not.Nullable();
             this.Map(x => x.Notes).CustomSqlType("ntext").Nullable();
             
             this.References(x => x.ReportsTo)

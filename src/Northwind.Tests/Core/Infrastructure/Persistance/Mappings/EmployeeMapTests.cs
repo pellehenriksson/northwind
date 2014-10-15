@@ -36,10 +36,10 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
                 new PersistenceSpecification<Employee>(session)
                   .CheckProperty(x => x.Name, "some name")
                   .CheckProperty(x => x.Title, "some description")
-                  .CheckProperty(x => x.Born, DateTime.Today)
-                  .CheckProperty(x => x.Hired, DateTime.Today)
-                  .CheckProperty(x => x.Address, address)
-                  .CheckProperty(x => x.Name, "some note")
+                  .CheckProperty(x => x.DayOfBirth, DateTime.Today)
+                  .CheckProperty(x => x.HiredDate, DateTime.Today)
+                  //.CheckProperty(x => x.Address, address)
+                  .CheckProperty(x => x.Notes, "some note")
                   .CheckReference(x => x.ReportsTo, boss, e => e.ReportsTo.Id == boss.Id)
 
                   .VerifyTheMappings();
