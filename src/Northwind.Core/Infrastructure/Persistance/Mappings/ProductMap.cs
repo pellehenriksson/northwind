@@ -22,11 +22,11 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
                     .Index("ix_product_supplier")
                     .ForeignKey("fk_product_supplier");
             
-            this.Map(x => x.Price).Not.Nullable();
             this.Map(x => x.InStock).Not.Nullable();
-            this.Map(x => x.OnOrder).Not.Nullable();
             this.Map(x => x.ReorderLevel).Not.Nullable();
             this.Map(x => x.Discontinued).Not.Nullable();
+
+            this.Component(x => x.Price).ColumnPrefix("Price");
         }
     }
 }

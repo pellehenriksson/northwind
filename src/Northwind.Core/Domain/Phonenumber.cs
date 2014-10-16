@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Northwind.Core.Common;
 
-namespace Northwind.Core.Domain
+namespace Northwind.Core.Domain 
 {
-    public class Phonenumber
+    public class Phonenumber : IValueObject
     {
         public Phonenumber(string description, string number)
         {
             if (string.IsNullOrWhiteSpace(number))
             {
-                throw new ArgumentException("Invalid number, must not be empty", number);
+                throw new DomainRuleException("Number should not be empty");
             }
 
             this.Description = description;
@@ -22,5 +22,9 @@ namespace Northwind.Core.Domain
         public virtual string Description { get; protected internal set; }
 
         public virtual string Number { get; protected internal set; }
+   }
+
+    public class NullPhonenumber : Phonenumber
+    {
     }
 }

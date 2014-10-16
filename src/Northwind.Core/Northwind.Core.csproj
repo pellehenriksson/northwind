@@ -56,14 +56,19 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Common\AppSettingsHelper.cs" />
+    <Compile Include="Common\IAggregateRoot.cs" />
+    <Compile Include="Common\IValueObject.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\DomainRuleException.cs" />
     <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Domain\Money.cs" />
     <Compile Include="Domain\Order.cs" />
     <Compile Include="Domain\OrderLine.cs" />
     <Compile Include="Domain\Phonenumber.cs" />
     <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\Quantity.cs" />
     <Compile Include="Domain\Region.cs" />
     <Compile Include="Domain\Shipper.cs" />
     <Compile Include="Domain\Supplier.cs" />
@@ -72,8 +77,12 @@
     <Compile Include="Infrastructure\Persistance\Mappings\CustomerMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\EmployeeMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\CategoryMap.cs" />
+    <Compile Include="Infrastructure\Persistance\Mappings\MoneyMap.cs" />
+    <Compile Include="Infrastructure\Persistance\Mappings\OrderlineMap.cs" />
+    <Compile Include="Infrastructure\Persistance\Mappings\OrderMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\PhonenumberMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\ProductMap.cs" />
+    <Compile Include="Infrastructure\Persistance\Mappings\QuantityMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\RegionMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\ShipperMap.cs" />
     <Compile Include="Infrastructure\Persistance\Mappings\SupplierMap.cs" />

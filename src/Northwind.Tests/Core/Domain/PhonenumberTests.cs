@@ -7,7 +7,7 @@ namespace Northwind.Tests.Core.Domain
     public class PhonenumberTests
     {
         [Fact]
-        public void Ctor_Inits_Description_And_Number()
+        public void Shoud_create_phonennumber()
         {
             var number = new Phonenumber("Extension", "123456");
             

@@ -11,6 +11,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Table("Categories");
 
             this.Id(x => x.Id).GeneratedBy.Identity();
+
             this.Map(x => x.Name).Length(15).Not.Nullable();
             this.Map(x => x.Description).CustomSqlType("ntext").Nullable();
         }

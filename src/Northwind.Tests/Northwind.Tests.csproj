@@ -60,8 +60,10 @@
     </Compile>
     <Compile Include="AbstractIntegrationTestBase.cs" />
     <Compile Include="Core\Domain\CategoryTests.cs" />
+    <Compile Include="Core\Domain\OrderTests.cs" />
     <Compile Include="Core\Domain\PhonenumberTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\CategoryMapTests.cs" />
+    <Compile Include="Core\Infrastructure\Persistance\Mappings\CustomerMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\EmployeeMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\ProductMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\RegionMapTests.cs" />

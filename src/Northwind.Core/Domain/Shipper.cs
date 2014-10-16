@@ -1,6 +1,8 @@
-﻿namespace Northwind.Core.Domain
+﻿using Northwind.Core.Common;
+
+namespace Northwind.Core.Domain
 {
-    public class Shipper
+    public class Shipper : IAggregateRoot
     {
         protected Shipper()
         {

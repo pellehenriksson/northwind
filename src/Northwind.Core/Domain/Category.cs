@@ -1,6 +1,8 @@
-﻿namespace Northwind.Core.Domain
+﻿using Northwind.Core.Common;
+
+namespace Northwind.Core.Domain
 {
-    public class Category
+    public class Category : IAggregateRoot
     {
         protected Category()
         {
@@ -14,11 +16,21 @@
 
         public static Category Create(string name, string description)
         {
-            return new Category { Name = name, Description = description };
+            var category = new Category();
+            
+            category.ChangeName(name);
+            category.ChangeDescription(description);
+
+            return category;
         }
 
         public virtual void ChangeName(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new DomainRuleException("Invalid name");
+            }
+
             this.Name = name;
         }
 

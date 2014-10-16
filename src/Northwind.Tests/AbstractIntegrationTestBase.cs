@@ -2,6 +2,7 @@
 
 using NHibernate;
 
+using Northwind.Core.Domain;
 using Northwind.Core.Infrastructure.Persistance;
 
 namespace Northwind.Tests
@@ -25,6 +26,16 @@ namespace Northwind.Tests
         protected AbstractIntegrationTestBase()
         {
             NHibernathHelper.RebuildDatabase();
+        }
+
+        protected Phonenumber GetPhonenumberForTest()
+        {
+            return new Phonenumber("home", "0470-81787");
+        }
+
+        protected Address GetAddressForTest()
+        {
+            return new Address("Slupvägen 11", "353 55", "Växjö", "Småland", "Sverige");
         }
     }
 }

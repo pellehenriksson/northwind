@@ -1,6 +1,8 @@
-﻿namespace Northwind.Core.Domain
+﻿using Northwind.Core.Common;
+
+namespace Northwind.Core.Domain
 {
-    public class Supplier
+    public class Supplier : IAggregateRoot
     {
         protected Supplier()
         {

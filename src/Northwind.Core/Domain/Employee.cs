@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Northwind.Core.Common;
+
 namespace Northwind.Core.Domain
 {
-    public class Employee
+    public class Employee : IAggregateRoot
     {
         protected Employee()
         {
