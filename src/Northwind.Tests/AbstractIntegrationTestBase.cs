@@ -28,6 +28,11 @@ namespace Northwind.Tests
             NHibernathHelper.RebuildDatabase();
         }
 
+        protected Customer GetCustomerForTest()
+        {
+            return Customer.Create("big customer", "fancy nancy", this.GetAddressForTest(), this.GetPhonenumberForTest());
+        }
+
         protected Phonenumber GetPhonenumberForTest()
         {
             return new Phonenumber("home", "0470-81787");
@@ -36,6 +41,21 @@ namespace Northwind.Tests
         protected Address GetAddressForTest()
         {
             return new Address("Slupvägen 11", "353 55", "Växjö", "Småland", "Sverige");
+        }
+
+        protected Category GetCategoryForTest()
+        {
+            return Category.Create("boxes", "really cool boxes");
+        }
+
+        protected Supplier GetSupplierForTest()
+        {
+            return Supplier.Create("some supplier", this.GetAddressForTest(), this.GetPhonenumberForTest());
+        }
+
+        protected Product GetProductForTest()
+        {
+            return Product.Create("a box", this.GetCategoryForTest(), this.GetSupplierForTest(), new Money(1000, "SEK"));
         }
     }
 }

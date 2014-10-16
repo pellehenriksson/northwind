@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("Northwind")]
 [assembly: AssemblyProduct("Crepido AB")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCopyright("Copyright Crepido AB 2013")]
+[assembly: AssemblyCopyright("Copyright Crepido AB 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

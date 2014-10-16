@@ -11,8 +11,8 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Table("Orderlines");
 
             this.Id(x => x.Id).GeneratedBy.Identity();
-
-            this.References(x => x.Product).Not.Nullable();
+            
+            this.References(x => x.Product).Not.Nullable().ForeignKey("fk_orderlines_products");
             this.Component(x => x.UnitPrice).ColumnPrefix("UnitPrice");
             this.Component(x => x.Quantity).ColumnPrefix("Quantity");
         }

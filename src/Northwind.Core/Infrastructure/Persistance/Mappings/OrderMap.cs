@@ -12,8 +12,11 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
 
             this.Map(x => x.OrderDate).Not.Nullable();
 
-            this.References(x => x.Customer).Not.Nullable();
-            this.HasMany(x => x.Orderlines).ForeignKeyCascadeOnDelete().Inverse();
+            this.References(x => x.Customer).Not.Nullable().ForeignKey("fk_orders_customers");
+            this.HasMany(x => x.Orderlines)
+                    .Cascade.AllDeleteOrphan()
+                    .ForeignKeyConstraintName("fk_orderlines_order")
+                    .Not.KeyNullable();
         }
     }
 }
