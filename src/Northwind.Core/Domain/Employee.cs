@@ -23,7 +23,7 @@ namespace Northwind.Core.Domain
 
         public virtual Address Address { get; protected internal set; }
 
-        public virtual string Notes { get; protected internal set; } // ? naming
+        public virtual string Notes { get; protected internal set; }
 
         public virtual Employee ReportsTo { get; protected internal set; }
 

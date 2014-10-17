@@ -17,11 +17,11 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Map(x => x.DayOfBirth).Not.Nullable();
             this.Map(x => x.HiredDate).Not.Nullable();
             this.Map(x => x.Notes).CustomSqlType("ntext").Nullable();
-            
+
             this.References(x => x.ReportsTo)
-                    .Nullable()
-                    .Index("ix_employee_employee")
-                    .ForeignKey("fk_employee_employee");
+                .Nullable()
+                .Index("ix_employee_employee")
+                .ForeignKey("fk_employee_employee");
 
             this.HasManyToMany(x => x.Territories).Table("EmployeesTerritories");
 

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Northwind.Core.Domain.Region">
-    <Position X="0.75" Y="7" Width="1.75" />
+    <Position X="0.75" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAgAAAAAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Region.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Northwind.Core.Domain.Territory">
-    <Position X="3.25" Y="7.5" Width="1.75" />
+    <Position X="4.75" Y="7.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAgAAAAAAAgAAAAAQAAAAAAMAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Territory.cs</FileName>
@@ -18,7 +18,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Shipper">
-    <Position X="7.75" Y="0.5" Width="1.75" />
+    <Position X="1.25" Y="10" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAQAAAAAAAAAgAAAQAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Shipper.cs</FileName>
@@ -29,7 +29,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Supplier">
-    <Position X="4.25" Y="4" Width="1.75" />
+    <Position X="10.25" Y="7.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAQAAAAAAAAAgAAAQAQAAAAAAMACAAAAAEIAAAA=</HashCode>
       <FileName>Domain\Supplier.cs</FileName>
@@ -41,7 +41,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Category">
-    <Position X="1" Y="12.5" Width="1.75" />
+    <Position X="15.75" Y="7.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAgAAAAAQACAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Category.cs</FileName>
@@ -49,9 +49,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Product">
-    <Position X="4.5" Y="12.25" Width="1.75" />
+    <Position X="12.75" Y="6.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AEACAAAAQQAAAJAAAAAAQCQAAAAAAEACAAAAAEAACAA=</HashCode>
+      <HashCode>AEACAAAAQQAAAJAAgAAAQCQAAAAAAMACAAAAAEAACAA=</HashCode>
       <FileName>Domain\Product.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -61,7 +61,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Employee">
-    <Position X="7" Y="7" Width="1.75" />
+    <Position X="7.75" Y="6.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>ACEiAAAAAAAAAEAAgAAAggwAAAAAgMACAAAkAEIAACA=</HashCode>
       <FileName>Domain\Employee.cs</FileName>
@@ -76,23 +76,23 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Phonenumber">
-    <Position X="7" Y="4" Width="2.25" />
+    <Position X="4.5" Y="10.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAgEAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Phonenumber.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Address">
-    <Position X="10" Y="5.5" Width="2" />
+    <Position X="7.75" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAAAIIAAAAAAAAAIAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAgAAAAAAIoAAAAAAAAAIAAIAAAAIAAAAAAAA=</HashCode>
       <FileName>Domain\Address.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Customer">
-    <Position X="13" Y="6.75" Width="2" />
+    <Position X="4" Y="3" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAKAAAAAAAAAAAAiAAAQAQAAAAAAMCCAAAAAEIAAAA=</HashCode>
       <FileName>Domain\Customer.cs</FileName>
@@ -104,25 +104,25 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Money">
-    <Position X="7.25" Y="13.75" Width="1.5" />
+    <Position X="13.25" Y="3.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAACACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAACACAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Money.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Quantity">
-    <Position X="14" Y="13.25" Width="1.75" />
+    <Position X="7.25" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
       <FileName>Domain\Quantity.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Order">
-    <Position X="10" Y="9" Width="1.75" />
+    <Position X="10.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CAECAAAgEAAAAAAAAAAEAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAECAAAgEAAAAAAAgAAEAAAAAAAAAMAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Order.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -134,9 +134,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Orderline">
-    <Position X="10" Y="13" Width="1.75" />
+    <Position X="10.25" Y="4.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>KAACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAA=</HashCode>
+      <HashCode>KAACAAAAAAAAAAAAgAAAAAAAAAAAAMAAAAAAgAAAAAA=</HashCode>
       <FileName>Domain\OrderLine.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

@@ -10,7 +10,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
     public class EmployeeMapTests : AbstractIntegrationTestBase
     {
-        [Fact(Skip = "figure out whats wrong")]
+        [Fact]
         public void Should_Map_Employee()
         {
             var boss = Employee.Create("Michael Scott");
@@ -33,7 +33,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
                     .CheckProperty(x => x.Address, this.GetAddressForTest())
                     .CheckProperty(x => x.Notes, "some note")
                     .CheckReference(x => x.ReportsTo, boss, e => e.ReportsTo.Id == boss.Id)
-                  .VerifyTheMappings();
+                    .VerifyTheMappings();
             }
         }
     }
