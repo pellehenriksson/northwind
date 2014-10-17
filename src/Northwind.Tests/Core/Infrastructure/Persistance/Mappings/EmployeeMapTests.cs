@@ -30,7 +30,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
                     .CheckProperty(x => x.Title, "some description")
                     .CheckProperty(x => x.DayOfBirth, DateTime.Today)
                     .CheckProperty(x => x.HiredDate, DateTime.Today)
-                   // .CheckProperty(x => x.Address, this.GetAddressForTest())
+                    .CheckProperty(x => x.Address, this.GetAddressForTest())
                     .CheckProperty(x => x.Notes, "some note")
                     .CheckReference(x => x.ReportsTo, boss, e => e.ReportsTo.Id == boss.Id)
                   .VerifyTheMappings();

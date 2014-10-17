@@ -19,5 +19,35 @@ namespace Northwind.Core.Domain
         }
 
         public int Value { get; protected internal set; }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((Quantity)obj);
+        }
+        
+        public override int GetHashCode()
+        {
+            return this.Value;
+        }
+
+        protected bool Equals(Quantity other)
+        {
+            return this.Value == other.Value;
+        }
     }
 }

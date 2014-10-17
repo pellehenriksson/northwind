@@ -30,5 +30,35 @@
 
             this.Quantity = quantity;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((Orderline)obj);
+        }
+        
+        public override int GetHashCode()
+        {
+            return this.Id;
+        }
+
+        protected bool Equals(Orderline other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

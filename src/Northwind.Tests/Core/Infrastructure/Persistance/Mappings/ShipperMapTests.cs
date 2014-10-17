@@ -15,7 +15,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
             {
                 new PersistenceSpecification<Shipper>(session)
                    .CheckProperty(x => x.Name, "some name")
-                   //.CheckProperty(x => x.Phonenumber, this.GetPhonenumberForTest())
+                   .CheckProperty(x => x.Phonenumber, this.GetPhonenumberForTest())
                    .VerifyTheMappings();
             }
         }

@@ -64,5 +64,35 @@ namespace Northwind.Core.Domain
                 this.Orderlines.Remove(orderline);
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((Order)obj);
+        }
+       
+        public override int GetHashCode()
+        {
+            return this.Id;
+        }
+
+        protected bool Equals(Order other)
+        {
+            return this.Id == other.Id;
+        }
     }
 }

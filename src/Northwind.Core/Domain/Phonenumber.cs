@@ -22,7 +22,40 @@ namespace Northwind.Core.Domain
         public virtual string Description { get; protected internal set; }
 
         public virtual string Number { get; protected internal set; }
-   }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((Phonenumber)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((this.Description != null ? this.Description.GetHashCode() : 0) * 397) ^ (this.Number != null ? this.Number.GetHashCode() : 0);
+            }
+        }
+
+        protected bool Equals(Phonenumber other)
+        {
+            return string.Equals(this.Description, other.Description) && string.Equals(this.Number, other.Number);
+        }
+    }
 
     public class NullPhonenumber : Phonenumber
     {
