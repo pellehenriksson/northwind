@@ -1,0 +1,3 @@
+Debug 2014-10-18 10:40:00.9585 Northwind.Core.Read.EmployeesQueryFactory Building query
+Debug 2014-10-18 10:40:01.0385 Northwind.Core.Read.EmployeesQueryFactory Executing query
+Debug 2014-10-18 10:40:01.4066 Northwind.Core.Read.EmployeesQueryFactory Found: 9 matches

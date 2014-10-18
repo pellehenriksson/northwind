@@ -15,7 +15,7 @@ namespace Northwind.Core.Read
 
         public TOutput Load<TInput, TOutput>(TInput input)
         {
-            var factory = this.kernel.TryGet<IQueryFactory<TInput, TOutput>>();
+            var factory = this.kernel.TryGet<IQuery<TInput, TOutput>>();
 
             if (factory == null)
             {

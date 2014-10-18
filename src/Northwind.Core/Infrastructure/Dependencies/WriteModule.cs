@@ -1,22 +1,22 @@
 ﻿using Ninject.Modules;
 
 using Northwind.Core.Common;
-using Northwind.Core.Read;
+using Northwind.Core.Write;
 
 namespace Northwind.Core.Infrastructure.Dependencies
 {
-    public class ReadModule : NinjectModule
+    public class WriteModule : NinjectModule
     {
         public override void Load()
         {
-            this.Bind<IQueryRepository>().To<QueryRepository>();
-            this.BindQueryFactories();
+           this.Bind<ICommandInvoker>().To<CommandInvoker>();
+           this.BindCommandHandlers();
         }
 
-        private void BindQueryFactories()
+        private void BindCommandHandlers()
         {
             this.GetType()
-                .Assembly.GetAllTypesImplementingInterface(typeof(IQuery<,>))
+                .Assembly.GetAllTypesImplementingInterface(typeof(ICommandHandler<>))
                 .ForEach(match => this.Bind(match.Interface).To(match.ConcreteType));
         }
     }

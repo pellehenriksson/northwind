@@ -1,0 +1,13 @@
+﻿@model IList<Northwind.Core.Read.EmployeesListQuery.Result>
+
+@{
+    ViewBag.Title = "Employees";
+}
+
+<h2>Employees</h2>
+
+@foreach (var m in Model)
+{
+    <p>@m.Name @m.Title</p>
+    
+}

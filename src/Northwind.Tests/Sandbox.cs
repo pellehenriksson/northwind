@@ -18,18 +18,18 @@ namespace Northwind.Tests
         {
             using (var session = SessionFactory.OpenStatelessSession())
             {
-                var q = new ProductsQueryFactory(session);
-                var r = q.Load(new ProductsQueryFactory.Criteria { Name = "a" });
+                var q = new ProductsQuery(session);
+                var r = q.Load(new ProductsQuery.Criteria { Name = "a" });
 
                 Console.Out.WriteLine(r.Count);
             }
         }
         
-        public class ProductsQueryFactory : IQueryFactory<ProductsQueryFactory.Criteria, IList<ProductsQueryFactory.Result>>
+        public class ProductsQuery : IQuery<ProductsQuery.Criteria, IList<ProductsQuery.Result>>
         {
             private readonly IStatelessSession session;
 
-            public ProductsQueryFactory(IStatelessSession session)
+            public ProductsQuery(IStatelessSession session)
             {
                 this.session = session;
             }

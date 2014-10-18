@@ -1,6 +1,6 @@
 ﻿namespace Northwind.Core.Read
 {
-    public interface IQueryFactory<TInput, TOutput>
+    public interface IQuery<TInput, TOutput>
     {
         TOutput Load(TInput model);
     }
