@@ -1,0 +1,44 @@
+﻿@model Northwind.Core.Read.EmployeeDetailsQuery.Result
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for @Model.Name</h2>
+
+<div class="row">
+    <div class="col-lg-4">
+        @{ var url = string.Format("/Content/northwind-images/employee-{0}.bmp", Model.Id);}
+        <img src="@url"/>
+    </div>
+    
+    <div class="col-lg-4">
+        <h3>Info</h3>
+        <p><strong>Title:</strong> @Model.Title</p>
+        <p><strong>Hired:</strong> @Model.HireDate.ToShortDateString()</p>
+        <p><strong>Born:</strong> @Model.DayOfBirth.ToShortDateString()</p>
+    </div>
+
+    <div class="col-lg-4">
+        <h3>Address</h3>
+        
+        <p>@Model.AddressStreet</p>
+        <p>@Model.AddressPostalCode</p>
+        <p>@Model.AddressCity</p>
+        <p>@Model.AddressRegion</p>
+        <p> @Model.AddressCountry</p>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <h3>Notes</h3>
+        @Model.Notes
+    </div>
+    
+    <div class="col-lg-4">
+        <h3>Reports to</h3>
+        @Model.ReportsToName
+    </div>
+</div>

@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Core", "Northwind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Web", "Northwind.Web\Northwind.Web.csproj", "{710E5588-0021-4AD4-90A3-E5C62F7D27B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2F26CA8B-99B4-444F-8DF5-83CD6DBBA2BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +39,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{705C3EAC-7354-41C3-9929-7BB6F4669B67} = {2F26CA8B-99B4-444F-8DF5-83CD6DBBA2BF}
+		{19ADA448-CEA3-4230-8E44-18DCE3A7FAEB} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
+		{710E5588-0021-4AD4-90A3-E5C62F7D27B4} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
 	EndGlobalSection
 EndGlobal

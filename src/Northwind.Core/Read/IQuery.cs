@@ -1,7 +1,7 @@
 ﻿namespace Northwind.Core.Read
 {
-    public interface IQuery<TInput, TOutput>
+    public interface IQuery<TCriteria, TResult>
     {
-        TOutput Load(TInput model);
+        TResult Load(TCriteria criteria);
     }
 }

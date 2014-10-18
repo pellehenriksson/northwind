@@ -29,5 +29,19 @@ namespace Northwind.Web.Controllers
             var model = this.queryRepository.Load<EmployeesListQuery.Criteria, IList<EmployeesListQuery.Result>>(new EmployeesListQuery.Criteria());
             return this.View(model);
         }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var criteria = new EmployeeDetailsQuery.Criteria { Id = id };
+            var model = this.queryRepository.Load<EmployeeDetailsQuery.Criteria, EmployeeDetailsQuery.Result>(criteria);
+
+            if (model == null)
+            {
+                return this.HttpNotFound(string.Format("No employee with id: '{0}' was found", id));
+            }
+
+            return this.View(model);
+        }
     }
 }

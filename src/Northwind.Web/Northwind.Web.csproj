@@ -141,6 +141,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\northwind-images\employee-1.bmp" />
+    <Content Include="Content\northwind-images\employee-2.bmp" />
+    <Content Include="Content\northwind-images\employee-3.bmp" />
+    <Content Include="Content\northwind-images\employee-4.bmp" />
+    <Content Include="Content\northwind-images\employee-5.bmp" />
+    <Content Include="Content\northwind-images\employee-6.bmp" />
+    <Content Include="Content\northwind-images\employee-7.bmp" />
+    <Content Include="Content\northwind-images\employee-8.bmp" />
+    <Content Include="Content\northwind-images\employee-9.bmp" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -176,6 +185,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

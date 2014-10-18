@@ -46,11 +46,11 @@ namespace Northwind.Tests
                 public string Name { get; set; }
             }
 
-            public IList<Result> Load(Criteria model)
+            public IList<Result> Load(Criteria criteria)
             {
                 var query =
                     this.session.Query<Product>()
-                        .Where(x => x.Name.StartsWith(model.Name))
+                        .Where(x => x.Name.StartsWith(criteria.Name))
                         .OrderBy(x => x.Name)
                         .Select(x => new Result { Id = x.Id, Name = x.Name });
 

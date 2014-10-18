@@ -6,8 +6,22 @@
 
 <h2>Employees</h2>
 
-@foreach (var m in Model)
-{
-    <p>@m.Name @m.Title</p>
-    
-}
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Title</td>
+                <td>@m.Name </td>
+                <td><a class="btn btn-default" href="@Url.Action("Details", new {id = m.Id})">Details >></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

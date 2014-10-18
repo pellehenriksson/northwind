@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 using NHibernate;
@@ -23,7 +22,7 @@ namespace Northwind.Core.Read
             this.logger = logger;
         }
 
-        public IList<Result> Load(Criteria model)
+        public IList<Result> Load(Criteria criteria)
         {
             this.logger.Debug("Building query");
 
@@ -33,8 +32,7 @@ namespace Northwind.Core.Read
                         {
                             Id = e.Id, 
                             Title = e.Title,
-                            Name = e.Name, 
-                            DayOfBirth = e.DayOfBirth
+                            Name = e.Name
                         };
 
             this.logger.Debug("Executing query");
@@ -57,8 +55,6 @@ namespace Northwind.Core.Read
             public string Title { get; set; }
 
             public string Name { get; set; }
-
-            public DateTime DayOfBirth { get; set; }
         }
     }
 }
