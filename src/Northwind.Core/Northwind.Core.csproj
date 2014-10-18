@@ -42,6 +42,15 @@
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.0.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Interface">
+      <HintPath>..\packages\NLog.Interface.3.0.0\lib\net40\NLog.Interface.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -51,8 +60,16 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Common\AppSettingsHelper.cs" />
+    <Compile Include="Infrastructure\Dependencies\CommonModule.cs" />
+    <Compile Include="Infrastructure\Dependencies\ReadModule.cs" />
+    <Compile Include="Write\CommandInvoker.cs" />
     <Compile Include="Common\IAggregateRoot.cs" />
+    <Compile Include="Write\ICommandHandler.cs" />
+    <Compile Include="Write\ICommandInvoker.cs" />
+    <Compile Include="Read\IQueryFactory.cs" />
+    <Compile Include="Read\IQueryRepository.cs" />
     <Compile Include="Common\IValueObject.cs" />
+    <Compile Include="Read\QueryRepository.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Customer.cs" />

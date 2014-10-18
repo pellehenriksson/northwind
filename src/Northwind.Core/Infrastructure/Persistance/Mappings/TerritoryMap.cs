@@ -11,7 +11,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Table("Territories");
 
             this.Id(x => x.Id).GeneratedBy.Identity();
-            this.Map(x => x.Name).Length(15).Not.Nullable();
+            this.Map(x => x.Name).Length(50).Not.Nullable();
             
             this.References(x => x.Region).Not.Nullable()
                 .Index("ix_territory_region")
