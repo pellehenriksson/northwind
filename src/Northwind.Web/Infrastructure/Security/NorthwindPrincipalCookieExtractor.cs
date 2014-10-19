@@ -2,7 +2,7 @@
 using System.Web.Script.Serialization;
 using System.Web.Security;
 
-namespace Northwind.Web.Infrastructure
+namespace Northwind.Web.Infrastructure.Security
 {
     public class NorthwindPrincipalCookieExtractor
     {

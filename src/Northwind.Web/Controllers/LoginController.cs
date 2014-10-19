@@ -6,7 +6,7 @@ using NHibernate;
 using NHibernate.Linq;
 
 using Northwind.Core.Domain;
-using Northwind.Web.Infrastructure;
+using Northwind.Web.Infrastructure.Security;
 
 namespace Northwind.Web.Controllers
 {

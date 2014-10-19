@@ -1,6 +1,6 @@
 ﻿using System.Security.Principal;
 
-namespace Northwind.Web.Infrastructure
+namespace Northwind.Web.Infrastructure.Security
 {
     public static class NorthwindPrincipalExtensions
     {

@@ -147,11 +147,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\NorthwindPrincipal.cs" />
-    <Compile Include="Infrastructure\NorthwindPrincipalCookieBuilder.cs" />
-    <Compile Include="Infrastructure\NorthwindPrincipalCookieExtractor.cs" />
-    <Compile Include="Infrastructure\NorthwindPrincipalExtensions.cs" />
-    <Compile Include="Infrastructure\NorthwindPrincipalUserData.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindPrincipal.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindPrincipalCookieBuilder.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindPrincipalCookieExtractor.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindPrincipalExtensions.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindPrincipalUserData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -209,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

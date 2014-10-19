@@ -6,6 +6,7 @@ using System.Web.Routing;
 using System.Web.Security;
 
 using Northwind.Web.Infrastructure;
+using Northwind.Web.Infrastructure.Security;
 
 namespace Northwind.Web
 {

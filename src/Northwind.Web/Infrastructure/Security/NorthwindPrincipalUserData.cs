@@ -1,4 +1,4 @@
-﻿namespace Northwind.Web.Infrastructure
+﻿namespace Northwind.Web.Infrastructure.Security
 {
     public class NorthwindPrincipalUserData
     {
