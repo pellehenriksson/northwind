@@ -8,6 +8,7 @@ using Northwind.Core.Write;
 
 namespace Northwind.Web.Controllers
 {
+    [Authorize]
     public class EmployeesController : Controller
     {
         private readonly IQueryRepository queryRepository;

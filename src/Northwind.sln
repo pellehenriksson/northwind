@@ -18,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2F26CA8B-99B4-444F-8DF5-83CD6DBBA2BF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{65181A05-E5BD-49EA-AFA2-7C92E1E94F20}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\user-stories.txt = ..\docs\user-stories.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -43,11 +43,16 @@ namespace Northwind.Web.Controllers
             }
 
             var builder = new NorthwindPrincipalCookieBuilder();
-            var cookie = builder.Build(user.Id.ToString(CultureInfo.InvariantCulture), user.Name, new[] { "fake" });
+            var cookie = builder.Build(user.Id.ToString(CultureInfo.InvariantCulture), user.Name, new[] { this.ResolveRole(user) });
 
             Response.Cookies.Add(cookie);
 
             return this.RedirectToAction("Index", "Home");
+        }
+
+        private string ResolveRole(Employee user)
+        {
+            return user.ReportsTo != null ? NorthwindUserRoles.User : NorthwindUserRoles.Manager;
         }
 
         public class LoginModel

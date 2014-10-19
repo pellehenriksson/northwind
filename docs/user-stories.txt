@@ -1,0 +1,14 @@
+roles: 
+	manager (reports to no one)
+	user (anyone who reports to somebody)
+		could also have their list of terrirories
+
+manager:
+	can add employee
+	can edit employee details
+	can edit employee terriories
+	can se full employee info
+
+user:
+	can see limited user info (others)
+	can se complete profile of self

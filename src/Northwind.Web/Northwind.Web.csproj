@@ -152,6 +152,7 @@
     <Compile Include="Infrastructure\Security\NorthwindPrincipalCookieExtractor.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalExtensions.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalUserData.cs" />
+    <Compile Include="Infrastructure\Security\NorthwindUserRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +207,7 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_LoginMenu.cshtml" />
+    <Content Include="Views\Shared\_FunctionsMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

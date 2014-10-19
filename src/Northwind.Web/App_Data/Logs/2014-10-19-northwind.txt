@@ -19,3 +19,33 @@ Debug 2014-10-19 12:05:48.1178 Northwind.Core.Read.EmployeesListQuery Found: 9 m
 Debug 2014-10-19 12:05:58.7774 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '1'
 Debug 2014-10-19 12:05:58.7774 Northwind.Core.Read.EmployeeDetailsQuery Executing query
 Debug 2014-10-19 12:05:58.7774 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 12:26:51.6225 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 12:26:51.6366 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 12:26:51.6366 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 12:26:53.9606 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '7'
+Debug 2014-10-19 12:26:53.9606 Northwind.Core.Read.EmployeeDetailsQuery Executing query
+Debug 2014-10-19 12:26:54.0476 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 12:34:06.5887 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 12:34:06.6018 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 12:34:06.6018 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 12:34:09.8360 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '7'
+Debug 2014-10-19 12:34:09.8360 Northwind.Core.Read.EmployeeDetailsQuery Executing query
+Debug 2014-10-19 12:34:09.8549 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '7'
+Debug 2014-10-19 12:34:09.8549 Northwind.Core.Read.EmployeeDetailsQuery Executing query
+Debug 2014-10-19 12:34:09.9349 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 12:34:09.9349 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 12:34:39.6176 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 12:34:39.6176 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 12:34:39.6176 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 12:34:54.3584 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '1'
+Debug 2014-10-19 12:34:54.3584 Northwind.Core.Read.EmployeeDetailsQuery Executing query
+Debug 2014-10-19 12:34:54.3704 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 12:54:12.6479 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 12:54:12.6699 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 12:54:12.6699 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 12:54:16.9652 Northwind.Core.Read.EmployeeDetailsQuery Building query for id: '5'
+Debug 2014-10-19 12:54:16.9652 Northwind.Core.Read.EmployeeDetailsQuery Executing query
+Debug 2014-10-19 12:54:16.9771 Northwind.Core.Read.EmployeeDetailsQuery Found match: 'True'
+Debug 2014-10-19 13:21:43.1579 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 13:21:43.1858 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 13:21:43.1968 Northwind.Core.Read.EmployeesListQuery Found: 9 matches

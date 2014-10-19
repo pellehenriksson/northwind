@@ -10,6 +10,7 @@ namespace Northwind.Web.Infrastructure.Security
         {
             this.Id = data.Id;
             this.Name = data.Name;
+            this.Roles = data.Roles;
         }
 
         public NorthwindPrincipal(IIdentity identity, string[] roles) : base(identity, roles)
@@ -20,5 +21,15 @@ namespace Northwind.Web.Infrastructure.Security
         public string Id { get; private set; }
 
         public string Name { get; private set; }
+
+        public string[] Roles { get; set; }
+
+        public string DisplayName
+        {
+            get
+            {
+                return string.Format("{0} ({1})", this.Name, this.Roles[0]);
+            }
+        }
     }
 }
