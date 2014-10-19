@@ -106,7 +106,10 @@
     <Compile Include="Infrastructure\Persistance\NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Write\CommandHandlers\" />
+    <Folder Include="Write\Commands\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Domain\_Domain.cd" />
     <None Include="packages.config" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Northwind.Core.Domain.Region">
-    <Position X="0.75" Y="5.75" Width="1.75" />
+    <Position X="0.75" Y="6" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAgAAAAAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Region.cs</FileName>
@@ -18,7 +18,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Shipper">
-    <Position X="1.25" Y="10" Width="1.75" />
+    <Position X="1.25" Y="10.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAQAAAAAAAAAgAAAQAQAAAAAAMAAAAAAAEAAAAA=</HashCode>
       <FileName>Domain\Shipper.cs</FileName>
@@ -61,7 +61,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Northwind.Core.Domain.Employee">
-    <Position X="7.75" Y="6.75" Width="1.75" />
+    <Position X="7.75" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>ACEiAAAAAAAAAEAAgAAAggwAAAAAgMACAAAkAEIAACA=</HashCode>
       <FileName>Domain\Employee.cs</FileName>
@@ -76,7 +76,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Phonenumber">
-    <Position X="4.5" Y="10.75" Width="2.25" />
+    <Position X="4.5" Y="11" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAgEAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Phonenumber.cs</FileName>
@@ -94,7 +94,7 @@
   <Class Name="Northwind.Core.Domain.Customer">
     <Position X="4" Y="3" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAKAAAAAAAAAAAAiAAAQAQAAAAAAMCCAAAAAEIAAAA=</HashCode>
+      <HashCode>AAAKAAAAAAAAAAEAiAAAQAQAAAAAAMCCAAAAAEIAAAA=</HashCode>
       <FileName>Domain\Customer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -104,7 +104,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Northwind.Core.Domain.Money">
-    <Position X="13.25" Y="3.75" Width="1.75" />
+    <Position X="13.25" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAACACAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Money.cs</FileName>
@@ -122,7 +122,7 @@
   <Class Name="Northwind.Core.Domain.Order">
     <Position X="10.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CAECAAAgEAAAAAAAgAAEAAAAAAAAAMAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAECAAAgEAAAAAAAgAAEAAAACAAAAMAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\Order.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

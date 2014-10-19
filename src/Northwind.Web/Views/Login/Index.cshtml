@@ -1,0 +1,20 @@
+﻿@model IList<Northwind.Web.Controllers.LoginController.LoginModel>
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="@Url.Action("Index", "Login")" method="post">
+    <select name="id">
+        @foreach (var m in Model)
+        {
+            <option value="@m.Id">@m.Name</option>
+        }
+    </select>
+
+    <button type="submit">Go</button>
+</form>
+
+

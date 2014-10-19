@@ -1,0 +1,25 @@
+﻿@using Northwind.Web.Infrastructure
+
+@{
+    var user = User as NorthwindPrincipal;
+}
+
+<ul class="nav navbar-nav navbar-right">
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-user"></i>
+                @user.Name <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a id="logoffMenuItem" href="@Url.Action("Index", "Login")">Login in as another user</a></li>
+            </ul> 
+        </li>
+    }
+    else
+    {
+        <li><a href="@Url.Action("Index", "Login")" id="loginMenuItem">Login</a></li>
+    }
+</ul>
