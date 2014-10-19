@@ -45,5 +45,5 @@ namespace Northwind.Tests
         }
     }
 }
-    // http://stackoverflow.com/questions/5371222/getting-binary-data-using-sqldatareader
-    // http://www.xtremedotnettalk.com/showthread.php?t=92297
+    //// http://stackoverflow.com/questions/5371222/getting-binary-data-using-sqldatareader
+    //// http://www.xtremedotnettalk.com/showthread.php?t=92297

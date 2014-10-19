@@ -67,21 +67,21 @@ namespace Northwind.Core.Domain
 
         public virtual void ChangeReportsTo(Employee employee)
         {
-            // can't reports to self or null
+            //// can't reports to self or null
 
             this.ReportsTo = employee;
         }
 
         public virtual void AddTerritory(Territory territory)
         {
-            // check if already exists
+            //// check if already exists
 
             this.Territories.Add(territory);
         }
 
         public virtual void RemoveTerritory(Territory territory)
         {
-            // implement
+            //// implement
         }
 
         public override bool Equals(object obj)

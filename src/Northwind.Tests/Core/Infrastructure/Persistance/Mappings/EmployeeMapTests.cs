@@ -13,7 +13,7 @@ namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
         [Fact]
         public void Should_Map_Employee()
         {
-            var boss = Employee.Create("Michael Scott", new DateTime(1960, 1, 1),DateTime.Today.AddYears(-10));
+            var boss = Employee.Create("Michael Scott", new DateTime(1960, 1, 1), DateTime.Today.AddYears(-10));
             boss.ChangeTitle("Regionl Manager");
  
             using (var session = SessionFactory.OpenSession())

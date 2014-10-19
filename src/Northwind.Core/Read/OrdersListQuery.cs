@@ -1,46 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 using NHibernate;
 using NHibernate.Linq;
 
-using NLog.Interface;
+using Northwind.Core.Domain;
 
 namespace Northwind.Core.Read
 {
-    public class OrdersListQuery : IQuery<OrdersListQuery.Criteria, IList<OrdersListQuery.Result>>
+    public class OrdersListQuery : IQuery<OrdersListQuery.Criteria, PagedListResult<OrdersListQuery.Result>>
     {
         private readonly IStatelessSession session;
 
-        private readonly ILogger logger;
-
-        public OrdersListQuery(IStatelessSession session, ILogger logger)
+        public OrdersListQuery(IStatelessSession session)
         {
             this.session = session;
-            this.logger = logger;
         }
 
-        public IList<Result> Load(Criteria criteria)
+        public PagedListResult<Result> Load(Criteria criteria)
         {
-            this.logger.Debug("Building query for employee id: '{0}'", criteria.EmployeeId);
+            var count = this.session.Query<Order>().Count(x => x.Employee.Id == criteria.EmployeeId);
 
-            var result =
+            var result = new PagedListResult<Result>
+            {
+                TotalNumberOfItems = count,
+                CurrentPage = criteria.CurrentPage,
+                ItemsPerPage = criteria.ItemsPerPage
+            };
+
+            var items =
                 this.session.Query<Domain.Order>()
                     .Where(x => x.Employee.Id == criteria.EmployeeId)
                     .OrderByDescending(x => x.OrderDate)
                     .Select(x => new Result { OrderId = x.Id, OrderDate = x.OrderDate, CustomerName = x.Customer.Name })
-                    .Take(20)
+                    .Skip((result.CurrentPage - 1) * result.ItemsPerPage)
+                    .Take(result.ItemsPerPage)
                     .ToList();
 
-            this.logger.Debug("Found: {0} matches", result.Count);
-            
+            result.Items = items;
+
             return result;
         }
 
         public class Criteria
         {
             public int EmployeeId { get; set; }
+
+            public int ItemsPerPage { get; set; }
+
+            public int CurrentPage { get; set; }
         }
 
         public class Result

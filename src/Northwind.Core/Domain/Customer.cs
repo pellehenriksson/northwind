@@ -10,7 +10,6 @@ namespace Northwind.Core.Domain
 
         public virtual int Id { get; protected internal set; }
 
-
         //// This is the id from the old system
         public virtual string TraceId { get; protected internal set; }
 

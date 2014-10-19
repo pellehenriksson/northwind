@@ -16,7 +16,7 @@ namespace Northwind.Web.Controllers
         [HttpGet]
         public ActionResult Index(int page = 1)
         {
-            var criteria = new EmployeesListQuery.Criteria { CurrentPage = page, ItemsPerPage = 5 };
+            var criteria = new EmployeesListQuery.Criteria { CurrentPage = page, ItemsPerPage = 15 };
 
             var model = this.queryRepository.Load<EmployeesListQuery.Criteria, PagedListResult<EmployeesListQuery.Result>>(criteria);
             

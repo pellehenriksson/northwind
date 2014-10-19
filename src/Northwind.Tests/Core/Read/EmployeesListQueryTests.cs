@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 using Northwind.Core.Read;
 
@@ -19,10 +19,13 @@ namespace Northwind.Tests.Core.Read
 
                 var result = query.Load(criteria);
 
-                Console.Out.WriteLine(result.TotalNumberOfItems);
-                Console.Out.WriteLine(result.CurrentPage);
-                Console.Out.WriteLine(result.ItemsPerPage);
-                Console.Out.WriteLine(result.TotalNumberOfPages);
+                Assert.Equal(9, result.Items.Count());
+
+                Assert.Equal(1, result.CurrentPage);
+                Assert.Equal(50, result.ItemsPerPage);
+                Assert.Equal(9, result.NumberOfItemsOnCurrentPage);
+                Assert.Equal(1, result.TotalNumberOfPages);
+                Assert.Equal(9, result.TotalNumberOfItems);
             }
         }
     }

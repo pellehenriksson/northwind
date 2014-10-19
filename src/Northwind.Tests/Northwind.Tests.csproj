@@ -78,6 +78,7 @@
     <Compile Include="Core\Infrastructure\Persistance\Mappings\TerritoryMapTests.cs" />
     <Compile Include="Core\Read\EmployeeDetailsQueryTests.cs" />
     <Compile Include="Core\Read\EmployeesListQueryTests.cs" />
+    <Compile Include="Core\Read\OrdersListQueryTests.cs" />
     <Compile Include="PullImagesFromOldSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

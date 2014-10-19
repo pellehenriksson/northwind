@@ -51,7 +51,7 @@ namespace Northwind.Core.Domain
         {
             unchecked
             {
-                int hashCode = (this.Street != null ? this.Street.GetHashCode() : 0);
+                int hashCode = this.Street != null ? this.Street.GetHashCode() : 0;
                 hashCode = (hashCode * 397) ^ (this.PostalCode != null ? this.PostalCode.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (this.City != null ? this.City.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (this.Region != null ? this.Region.GetHashCode() : 0);

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 using Northwind.Core.Read;
 
@@ -15,10 +14,10 @@ namespace Northwind.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            var criteria = new OrdersListQuery.Criteria { EmployeeId = CurrentUser.Id };
-            var model = this.queryRepository.Load<OrdersListQuery.Criteria, IList<OrdersListQuery.Result>>(criteria);
+            var criteria = new OrdersListQuery.Criteria { EmployeeId = CurrentUser.Id, CurrentPage = page, ItemsPerPage = 15 };
+            var model = this.queryRepository.Load<OrdersListQuery.Criteria, PagedListResult<OrdersListQuery.Result>>(criteria);
             
             return this.View(model);
         }

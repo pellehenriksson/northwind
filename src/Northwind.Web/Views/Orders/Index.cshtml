@@ -1,26 +1,33 @@
-﻿@model IList<Northwind.Core.Read.OrdersListQuery.Result>
+﻿@model Northwind.Core.Read.PagedListResult<Northwind.Core.Read.OrdersListQuery.Result>
 
 @{
     ViewBag.Title = "My Orders";
 }
 
-<h2>My Orders</h2>
+<div class="row">
+    <h2>My Orders</h2> 
+</div>
 
-<table class="table table-condensed table-hover">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Customer</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var m in Model)
-        {
+<div class="row">
+    <table class="table table-condensed table-hover">
+        <thead>
             <tr>
-                <td>@m.OrderDate.ToShortDateString()</td>
-                <td>@m.CustomerName</td>
+                <th>Date</th>
+                <th>Customer</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.Items)
+            {
+                <tr>
+                    <td>@m.OrderDate.ToShortDateString()</td>
+                    <td>@m.CustomerName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@Html.Partial("_PagingWidget", Model)
+
 
