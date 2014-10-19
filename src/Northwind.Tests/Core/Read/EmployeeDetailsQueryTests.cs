@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Read
 {
-    public class EmployeeDetailsQueryTests : AbstractIntegrationTestWithDataBase
+    public class EmployeeDetailsQueryTests : AbstractIntegrationTestWithData
     {
         [Fact]
         public void Should_Return_Details_For_Employee()

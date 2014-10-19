@@ -12,3 +12,7 @@ manager:
 user:
 	can see limited user info (others)
 	can se complete profile of self
+
+user:
+	can create new order
+

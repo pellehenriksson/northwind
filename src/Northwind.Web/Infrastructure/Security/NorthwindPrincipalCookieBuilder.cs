@@ -7,7 +7,7 @@ namespace Northwind.Web.Infrastructure.Security
 {
     public class NorthwindPrincipalCookieBuilder
     {
-        public HttpCookie Build(string id, string name, string[] roles)
+        public HttpCookie Build(int id, string name, string[] roles)
         {
             var data = new NorthwindPrincipalUserData { Id = id, Name = name, Roles = roles };
             var serializer = new JavaScriptSerializer();

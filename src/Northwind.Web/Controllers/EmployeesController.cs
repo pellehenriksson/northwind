@@ -1,33 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-
-using NLog.Interface;
+﻿using System.Web.Mvc;
 
 using Northwind.Core.Read;
-using Northwind.Core.Write;
 
 namespace Northwind.Web.Controllers
 {
-    [Authorize]
-    public class EmployeesController : Controller
+    public class EmployeesController : AbstractApplicationController
     {
         private readonly IQueryRepository queryRepository;
 
-        private ICommandInvoker commandInvoker;
-
-        private ILogger logger;
-
-        public EmployeesController(IQueryRepository queryRepository, ICommandInvoker commandInvoker, ILogger logger)
+        public EmployeesController(IQueryRepository queryRepository)
         {
             this.queryRepository = queryRepository;
-            this.commandInvoker = commandInvoker;
-            this.logger = logger;
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            var model = this.queryRepository.Load<EmployeesListQuery.Criteria, IList<EmployeesListQuery.Result>>(new EmployeesListQuery.Criteria());
+            var criteria = new EmployeesListQuery.Criteria { CurrentPage = page, ItemsPerPage = 5 };
+
+            var model = this.queryRepository.Load<EmployeesListQuery.Criteria, PagedListResult<EmployeesListQuery.Result>>(criteria);
+            
             return this.View(model);
         }
 

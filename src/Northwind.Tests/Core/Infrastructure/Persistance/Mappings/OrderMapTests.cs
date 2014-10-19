@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class OrderMapTests : AbstractIntegrationTestBase
+    public class OrderMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_map_Order()

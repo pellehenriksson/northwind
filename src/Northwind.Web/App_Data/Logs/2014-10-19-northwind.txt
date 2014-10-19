@@ -49,3 +49,14 @@ Debug 2014-10-19 12:54:16.9771 Northwind.Core.Read.EmployeeDetailsQuery Found ma
 Debug 2014-10-19 13:21:43.1579 Northwind.Core.Read.EmployeesListQuery Building query
 Debug 2014-10-19 13:21:43.1858 Northwind.Core.Read.EmployeesListQuery Executing query
 Debug 2014-10-19 13:21:43.1968 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 13:42:03.4855 Northwind.Core.Read.EmployeesListQuery Building query
+Debug 2014-10-19 13:42:03.4945 Northwind.Core.Read.EmployeesListQuery Executing query
+Debug 2014-10-19 13:42:03.5085 Northwind.Core.Read.EmployeesListQuery Found: 9 matches
+Debug 2014-10-19 14:16:03.7761 Northwind.Core.Read.OrdersListQuery Building query for employee id: '7'
+Debug 2014-10-19 14:16:03.8912 Northwind.Core.Read.OrdersListQuery Found: 30 matches
+Debug 2014-10-19 14:17:46.7009 Northwind.Core.Read.OrdersListQuery Building query for employee id: '1'
+Debug 2014-10-19 14:17:46.7009 Northwind.Core.Read.OrdersListQuery Found: 30 matches
+Debug 2014-10-19 14:24:22.0949 Northwind.Core.Read.OrdersListQuery Building query for employee id: '1'
+Debug 2014-10-19 14:24:22.5319 Northwind.Core.Read.OrdersListQuery Found: 20 matches
+Debug 2014-10-19 14:24:56.0618 Northwind.Core.Read.OrdersListQuery Building query for employee id: '1'
+Debug 2014-10-19 14:24:56.6298 Northwind.Core.Read.OrdersListQuery Found: 20 matches

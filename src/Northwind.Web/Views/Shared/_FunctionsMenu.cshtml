@@ -2,14 +2,15 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <li><a href="@Url.Action("Index", "Employees")">Employees</a></li>
-
     if (User.IsInRole(NorthwindUserRoles.Manager))
     {
     }
-    
+
     if (User.IsInRole(NorthwindUserRoles.User))
     {
+        <li><a href="@Url.Action("Index", "Orders")">Orders</a></li>
     }
+
+    <li><a href="@Url.Action("Index", "Employees")">Employees</a></li>
 }
    

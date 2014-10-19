@@ -1,0 +1,26 @@
+﻿@model IList<Northwind.Core.Read.OrdersListQuery.Result>
+
+@{
+    ViewBag.Title = "My Orders";
+}
+
+<h2>My Orders</h2>
+
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Customer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.OrderDate.ToShortDateString()</td>
+                <td>@m.CustomerName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

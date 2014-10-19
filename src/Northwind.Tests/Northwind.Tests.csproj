@@ -62,8 +62,8 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AbstractIntegrationTestBase.cs" />
-    <Compile Include="AbstractIntegrationTestWithDataBase.cs" />
+    <Compile Include="AbstractIntegrationTest.cs" />
+    <Compile Include="AbstractIntegrationTestWithData.cs" />
     <Compile Include="Core\Domain\CategoryTests.cs" />
     <Compile Include="Core\Domain\OrderTests.cs" />
     <Compile Include="Core\Domain\PhonenumberTests.cs" />

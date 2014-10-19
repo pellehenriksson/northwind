@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class TerritoryMapTests : AbstractIntegrationTestBase
+    public class TerritoryMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_Map_Territory()

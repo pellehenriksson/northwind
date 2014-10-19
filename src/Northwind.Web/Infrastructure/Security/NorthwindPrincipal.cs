@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Globalization;
 using System.Security.Principal;
 
 namespace Northwind.Web.Infrastructure.Security
 {
     public class NorthwindPrincipal : GenericPrincipal
     {
-        public NorthwindPrincipal(string id, NorthwindPrincipalUserData data)
-            : base(new GenericIdentity(id), data.Roles)
+        public NorthwindPrincipal(string id, NorthwindPrincipalUserData data) : base(new GenericIdentity(id.ToString(CultureInfo.InvariantCulture)), data.Roles)
         {
             this.Id = data.Id;
             this.Name = data.Name;
@@ -18,7 +18,7 @@ namespace Northwind.Web.Infrastructure.Security
             throw new InvalidOperationException("Call constructor overload");
         }
 
-        public string Id { get; private set; }
+        public int Id { get; private set; }
 
         public string Name { get; private set; }
 
@@ -26,10 +26,7 @@ namespace Northwind.Web.Infrastructure.Security
 
         public string DisplayName
         {
-            get
-            {
-                return string.Format("{0} ({1})", this.Name, this.Roles[0]);
-            }
+            get { return string.Format("{0} ({1})", this.Name, this.Roles[0]); }
         }
     }
 }

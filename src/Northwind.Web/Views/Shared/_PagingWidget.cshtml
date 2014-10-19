@@ -1,0 +1,21 @@
+﻿@model Northwind.Core.Read.IPagedListResult
+
+<div class="row">
+    <strong>Showing @Model.NumberOfItemsOnCurrentPage of total @Model.TotalNumberOfItems items</strong>
+</div>
+
+
+@if (Model.TotalNumberOfPages > 1)
+{
+    <div class="row">
+        <ul class="pagination pagination-sm">
+            @for (var index = 1; index <= Model.TotalNumberOfPages; index++)
+            {
+                <li @if (index == @Model.CurrentPage) { <text> class='active' </text> }>
+                    <a href="@Url.Action("Index", new {page = index})">@index</a>
+                </li>
+            }
+        </ul>
+    </div>
+}
+

@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class CategoryMapTests : AbstractIntegrationTestBase
+    public class CategoryMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_Map_Category()

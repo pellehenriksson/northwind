@@ -64,8 +64,11 @@
     <Compile Include="Infrastructure\Dependencies\CommonModule.cs" />
     <Compile Include="Infrastructure\Dependencies\ReadModule.cs" />
     <Compile Include="Infrastructure\Dependencies\WriteModule.cs" />
+    <Compile Include="Read\IPagedListResult.cs" />
+    <Compile Include="Read\PagedListResult.cs" />
     <Compile Include="Read\EmployeeDetailsQuery.cs" />
     <Compile Include="Read\EmployeesListQuery.cs" />
+    <Compile Include="Read\OrdersListQuery.cs" />
     <Compile Include="Write\CommandInvoker.cs" />
     <Compile Include="Common\IAggregateRoot.cs" />
     <Compile Include="Write\ICommandHandler.cs" />

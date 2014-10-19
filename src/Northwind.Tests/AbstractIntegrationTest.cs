@@ -7,13 +7,13 @@ using Northwind.Core.Infrastructure.Persistance;
 
 namespace Northwind.Tests
 {
-    public abstract class AbstractIntegrationTestBase
+    public abstract class AbstractIntegrationTest
     {
         protected static readonly ISessionFactory SessionFactory;
 
         private static readonly NHibernateHelper NHibernathHelper;
 
-        static AbstractIntegrationTestBase()
+        static AbstractIntegrationTest()
         {
             HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
 
@@ -23,7 +23,7 @@ namespace Northwind.Tests
             SessionFactory = NHibernathHelper.SessionFactory;
         }
 
-        protected AbstractIntegrationTestBase()
+        protected AbstractIntegrationTest()
         {
             NHibernathHelper.RebuildDatabase();
         }

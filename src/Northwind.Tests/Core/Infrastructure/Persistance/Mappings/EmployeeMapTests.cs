@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class EmployeeMapTests : AbstractIntegrationTestBase
+    public class EmployeeMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_Map_Employee()

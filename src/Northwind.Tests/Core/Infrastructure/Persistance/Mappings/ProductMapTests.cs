@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class ProductMapTests : AbstractIntegrationTestBase
+    public class ProductMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_Map_Product()

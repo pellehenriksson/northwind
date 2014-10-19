@@ -15,11 +15,11 @@ namespace Northwind.Tests
     /// Will build the database and load data from the original
     /// northwind database
     /// </summary>
-    public abstract class AbstractIntegrationTestWithDataBase
+    public abstract class AbstractIntegrationTestWithData
     {
         protected static readonly ISessionFactory SessionFactory;
 
-        static AbstractIntegrationTestWithDataBase()
+        static AbstractIntegrationTestWithData()
         {
             HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
 

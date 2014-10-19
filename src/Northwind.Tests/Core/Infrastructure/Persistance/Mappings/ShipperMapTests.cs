@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Northwind.Tests.Core.Infrastructure.Persistance.Mappings
 {
-    public class ShipperMapTests : AbstractIntegrationTestBase
+    public class ShipperMapTests : AbstractIntegrationTest
     {
         [Fact]
         public void Should_Map_Shipper()
