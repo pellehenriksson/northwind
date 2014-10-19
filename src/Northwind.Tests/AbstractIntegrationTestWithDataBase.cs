@@ -4,6 +4,9 @@ using System.IO;
 
 using NHibernate;
 
+using NLog;
+using NLog.Interface;
+
 using Northwind.Core.Infrastructure.Persistance;
 
 namespace Northwind.Tests
@@ -12,26 +15,32 @@ namespace Northwind.Tests
     /// Will build the database and load data from the original
     /// northwind database
     /// </summary>
-    public abstract class AbstractIntegrationTestsWithDataBase
+    public abstract class AbstractIntegrationTestWithDataBase
     {
         protected static readonly ISessionFactory SessionFactory;
 
-        private static readonly NHibernateHelper NHibernathHelper;
-
-        static AbstractIntegrationTestsWithDataBase()
+        static AbstractIntegrationTestWithDataBase()
         {
             HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
 
             var connectionString = ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString;
-            NHibernathHelper = new NHibernateHelper(connectionString);
+            var nhibernathHelper = new NHibernateHelper(connectionString);
 
-            SessionFactory = NHibernathHelper.SessionFactory;
+            SessionFactory = nhibernathHelper.SessionFactory;
 
-            NHibernathHelper.RebuildDatabase();
+            nhibernathHelper.RebuildDatabase();
 
             LoadData();
         }
 
+        protected ILogger Logger
+        {
+            get
+            {
+                return new LoggerAdapter(LogManager.GetLogger(this.GetType().Name));
+            }
+        }
+        
         private static void LoadData()
         {
             using (var session = SessionFactory.OpenSession())

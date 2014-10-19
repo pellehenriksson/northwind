@@ -13,7 +13,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Id(x => x.Id).GeneratedBy.Identity();
 
             this.Map(x => x.Name).Not.Nullable();
-            this.Map(x => x.Title).Not.Nullable();
+            this.Map(x => x.Title).Nullable();
             this.Map(x => x.DayOfBirth).Not.Nullable();
             this.Map(x => x.HiredDate).Not.Nullable();
             this.Map(x => x.Notes).CustomSqlType("ntext").Nullable();

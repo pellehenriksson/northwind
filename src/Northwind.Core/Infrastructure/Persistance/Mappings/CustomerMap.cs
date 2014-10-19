@@ -11,6 +11,7 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Table("Customers");
 
             this.Id(x => x.Id).GeneratedBy.Identity();
+            this.Map(x => x.TraceId).Nullable().Length(10);
 
             this.Map(x => x.Name).Not.Nullable().Length(40);
             this.Map(x => x.Contact).Not.Nullable().Length(40);

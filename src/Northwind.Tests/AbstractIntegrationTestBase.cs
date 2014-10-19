@@ -27,7 +27,7 @@ namespace Northwind.Tests
         {
             NHibernathHelper.RebuildDatabase();
         }
-
+        
         protected Customer GetCustomerForTest()
         {
             return Customer.Create("big customer", "fancy nancy", this.GetAddressForTest(), this.GetPhonenumberForTest());

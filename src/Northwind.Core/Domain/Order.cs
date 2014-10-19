@@ -18,16 +18,24 @@ namespace Northwind.Core.Domain
 
         public virtual Customer Customer { get; protected internal set; }
 
+        public virtual Employee Employee { get; protected internal set; }
+
         public virtual IList<Orderline> Orderlines { get; protected internal set; }
 
-        public static Order Create(Customer customer)
+        public static Order Create(Customer customer, Employee employee)
         {
             if (customer == null)
             {
                 throw new DomainRuleException("Customer should not be null");
             }
 
-            var order = new Order { OrderDate = DateTime.UtcNow, Customer = customer, Orderlines = new List<Orderline>() };
+            if (employee == null)
+            {
+                throw new DomainRuleException("Employee should not be null");
+            }
+
+            var order = new Order { OrderDate = DateTime.UtcNow, Customer = customer, Employee = employee, Orderlines = new List<Orderline>() };
+            
             return order;
         }
 

@@ -13,6 +13,9 @@ namespace Northwind.Core.Infrastructure.Persistance.Mappings
             this.Map(x => x.OrderDate).Not.Nullable();
 
             this.References(x => x.Customer).Not.Nullable().ForeignKey("fk_orders_customers");
+
+             this.References(x => x.Employee).Not.Nullable().ForeignKey("fk_orders_employee");
+
             this.HasMany(x => x.Orderlines)
                     .Cascade.AllDeleteOrphan()
                     .ForeignKeyConstraintName("fk_orderlines_order")

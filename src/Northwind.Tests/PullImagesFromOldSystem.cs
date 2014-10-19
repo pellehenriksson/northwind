@@ -2,13 +2,10 @@
 using System.Data.SqlClient;
 using System.IO;
 
-using Xunit;
-
 namespace Northwind.Tests
 {
-    public class FetchImages
+    public class PullImagesFromOldSystem
     {
-        [Fact]
         public void Fetch_Categories()
         {
             using (var connection = new SqlConnection("server=.;database=Northwind;Integrated Security=SSPI"))
@@ -28,7 +25,6 @@ namespace Northwind.Tests
             }
         }
 
-        [Fact]
         public void Fetch_Employees()
         {
             using (var connection = new SqlConnection("server=.;database=Northwind;Integrated Security=SSPI"))

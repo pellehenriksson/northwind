@@ -29,9 +29,15 @@ namespace Northwind.Core.Domain
 
         public virtual IList<Territory> Territories { get; protected internal set; }
 
-        public static Employee Create(string name)
+        public static Employee Create(string name, DateTime dayOfBirth, DateTime hireDate)
         {
-            return new Employee { Name = name };
+            var employee = new Employee();
+
+            employee.ChangeName(name);
+            employee.ChangeDayOfBirth(dayOfBirth);
+            employee.ChangeHiredDate(hireDate);
+
+            return employee;
         }
 
         public virtual void ChangeName(string name)

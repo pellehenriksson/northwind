@@ -1,4 +1,6 @@
-﻿using Northwind.Core.Domain;
+﻿using System;
+
+using Northwind.Core.Domain;
 
 using Xunit;
 
@@ -9,9 +11,10 @@ namespace Northwind.Tests.Core.Domain
         [Fact]
         public void Sandbox()
         {
+            var employee = Employee.Create("Michael Scott", new DateTime(1960, 1, 1), DateTime.Today.AddYears(-10));
             var customer = Customer.Create("big customer", "fancy nancy", new NullAddress(), new NullPhonenumber());
 
-            var order = Order.Create(customer);
+            var order = Order.Create(customer, employee);
 
             var category = Category.Create("boxes", "really cool boxes");
             var supplier = Supplier.Create("some supplier", new NullAddress(), new NullPhonenumber());

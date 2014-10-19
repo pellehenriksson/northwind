@@ -1,4 +1,6 @@
 
+delete from Orderlines
+delete from orders
 delete from Employees
 delete from Customers
 delete from Shippers
@@ -47,7 +49,7 @@ SET IDENTITY_INSERT Suppliers OFF
 SET IDENTITY_INSERT Products ON
 	
 	insert into Products (Id, Name, InStock, ReorderLevel, Discontinued, Category_id, Supplier_id, PriceAmount, PriceCurrency)
-	select ProductID, ProductName, UnitsInStock, ReorderLevel, Discontinued, CategoryID, SupplierID, UnitPrice, '$' from Northwind.dbo.Products
+	select ProductID, ProductName, UnitsInStock, ReorderLevel, Discontinued, CategoryID, SupplierID, UnitPrice, 'USD' from Northwind.dbo.Products
 	
 SET IDENTITY_INSERT Products OFF
 ----------------------------------------------------------------------------------------------------
@@ -58,11 +60,20 @@ SET IDENTITY_INSERT Shippers ON
 	
 SET IDENTITY_INSERT Shippers OFF
 ----------------------------------------------------------------------------------------------------
---SET IDENTITY_INSERT Customers ON
 
-	--insert into Customers (Id, Name, Contact, AddressStreet, AddressPostalCode, AddressCity, AddressRegion, AddressCountry)
-	--select CustomerID, CompanyName, ContactName, Address, PostalCode, City, Region, Country from Northwind.dbo.Customers
+	insert into Customers (TraceId, Name, Contact, AddressStreet, AddressPostalCode, AddressCity, AddressRegion, AddressCountry)
+	select CustomerID, CompanyName, ContactName, Address, PostalCode, City, Region, Country from Northwind.dbo.Customers
+	
+----------------------------------------------------------------------------------------------------
+SET IDENTITY_INSERT Orders ON
 
-	--select * from Customers
+	insert into Orders(Id, OrderDate, Customer_id, Employee_Id)
+	select OrderID, OrderDate, Customers.Id, EmployeeID from Northwind.dbo.Orders
+		inner join Customers on Customers.TraceId = Northwind.dbo.Orders.CustomerID
 
---SET IDENTITY_INSERT Customers OFF
+SET IDENTITY_INSERT Orders OFF
+----------------------------------------------------------------------------------------------------
+	
+	insert into OrderLines (Product_id, UnitPriceAmount, UnitPriceCurrency, QuantityValue, Order_id)
+	select ProductID, UnitPrice, 'USD', Quantity, OrderID  from Northwind.dbo.[Order Details]
+
