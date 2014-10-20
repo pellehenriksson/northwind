@@ -9,7 +9,7 @@ namespace Northwind.Tests.Core.Read
     public class OrdersListQueryTests : AbstractIntegrationTestWithData
     {
         [Fact]
-        public void Should_Return_List_Of_Orders_For_Empployee()
+        public void Should_Return_Paged_List_Of_Orders_For_Empployee()
         {
             using (var session = SessionFactory.OpenStatelessSession())
             {

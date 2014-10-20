@@ -76,6 +76,7 @@
     <Compile Include="Core\Infrastructure\Persistance\Mappings\ShipperMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\SupplierMapTests.cs" />
     <Compile Include="Core\Infrastructure\Persistance\Mappings\TerritoryMapTests.cs" />
+    <Compile Include="Core\Read\CategoriesListQueryTests.cs" />
     <Compile Include="Core\Read\EmployeeDetailsQueryTests.cs" />
     <Compile Include="Core\Read\EmployeesListQueryTests.cs" />
     <Compile Include="Core\Read\OrdersListQueryTests.cs" />
