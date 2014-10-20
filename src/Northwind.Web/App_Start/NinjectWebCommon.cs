@@ -1,5 +1,6 @@
 using System;
 using System.Web;
+using System.Web.Mvc;
 
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
@@ -8,6 +9,7 @@ using Ninject.Web.Common;
 
 using Northwind.Core.Infrastructure.Dependencies;
 using Northwind.Web;
+using Northwind.Web.Infrastructure.Dependencies;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
@@ -49,6 +51,8 @@ namespace Northwind.Web
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+                RegisterMvcValidation(kernel);
+
                 return kernel;
             }
             catch
@@ -56,6 +60,15 @@ namespace Northwind.Web
                 kernel.Dispose();
                 throw;
             }
+        }
+
+        private static void RegisterMvcValidation(IKernel kernel)
+        {
+            var provider = new FluentValidation.Mvc.FluentValidationModelValidatorProvider(new NinjectFluentValidationValidatorFactory(kernel));
+            ModelValidatorProviders.Providers.Add(provider);
+
+            DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
+            provider.AddImplicitRequiredValidator = false;
         }
 
         /// <summary>
