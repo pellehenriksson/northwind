@@ -64,7 +64,9 @@
     <Compile Include="Infrastructure\Dependencies\CommonModule.cs" />
     <Compile Include="Infrastructure\Dependencies\ReadModule.cs" />
     <Compile Include="Infrastructure\Dependencies\WriteModule.cs" />
+    <Compile Include="Read\CategoriesListQuery.cs" />
     <Compile Include="Read\IPagedListResult.cs" />
+    <Compile Include="Read\PagedCriteria.cs" />
     <Compile Include="Read\PagedListResult.cs" />
     <Compile Include="Read\EmployeeDetailsQuery.cs" />
     <Compile Include="Read\EmployeesListQuery.cs" />

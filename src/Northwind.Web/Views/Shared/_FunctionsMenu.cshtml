@@ -4,6 +4,7 @@
 {
     if (User.IsInRole(NorthwindUserRoles.Manager))
     {
+        <li><a href="@Url.Action("Index", "Categories")">Categories</a></li>
     }
 
     if (User.IsInRole(NorthwindUserRoles.User))

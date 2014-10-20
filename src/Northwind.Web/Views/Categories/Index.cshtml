@@ -1,11 +1,10 @@
-﻿@model Northwind.Core.Read.PagedListResult<Northwind.Core.Read.EmployeesListQuery.Result>
+﻿@model Northwind.Core.Read.PagedListResult<Northwind.Core.Read.CategoriesListQuery.Result>
 
 @{
-    ViewBag.Title = "Employees";
+    ViewBag.Title = "Categories";
 }
-
-<div class="row">
-    <h2>Employees</h2>
+<div class="page-header">
+    <h1>Categories <small>manage your categories</small></h1>
 </div>
 
 <div class="row">
@@ -13,7 +12,7 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Title</th>
+                <th>Description</th>
                 <th></th>
             </tr>
         </thead>
@@ -22,7 +21,7 @@
             {
                 <tr>
                     <td>@m.Name </td>
-                    <td>@m.Title</td>
+                    <td>@m.Description</td>
                     <td><a class="btn btn-default" href="@Url.Action("Details", new {id = m.Id})">Details >></a></td>
                 </tr>
             }

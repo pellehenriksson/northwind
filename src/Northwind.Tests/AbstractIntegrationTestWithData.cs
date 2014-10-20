@@ -29,7 +29,10 @@ namespace Northwind.Tests
             SessionFactory = nhibernathHelper.SessionFactory;
 
             nhibernathHelper.RebuildDatabase();
+        }
 
+        protected AbstractIntegrationTestWithData()
+        {
             LoadData();
         }
 
