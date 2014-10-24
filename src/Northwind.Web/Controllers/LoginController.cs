@@ -46,6 +46,11 @@ namespace Northwind.Web.Controllers
 
             Response.Cookies.Add(cookie);
 
+            //if (!string.IsNullOrWhiteSpace(returnUrl))
+            //{
+            //    return this.Redirect(returnUrl);
+            //}
+
             return this.RedirectToAction("Index", "Home");
         }
 

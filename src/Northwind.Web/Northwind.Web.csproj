@@ -157,12 +157,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Dependencies\NinjectFluentValidationValidatorFactory.cs" />
+    <Compile Include="Infrastructure\Dependencies\WebModule.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipal.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalCookieBuilder.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalCookieExtractor.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalExtensions.cs" />
     <Compile Include="Infrastructure\Security\NorthwindPrincipalUserData.cs" />
     <Compile Include="Infrastructure\Security\NorthwindUserRoles.cs" />
+    <Compile Include="Infrastructure\SystemMessage.cs" />
+    <Compile Include="InputModels\CategoryInputModel.cs" />
+    <Compile Include="InputValidators\CategoryInputModelValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,7 +186,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\mvc-validation.css" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -200,6 +204,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\northwind-systemmessage.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -221,9 +226,15 @@
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\Shared\_PagingWidget.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Categories\Change.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\_Form.cshtml" />
+    <Content Include="Views\Shared\_SystemMessage.cshtml" />
+    <Content Include="Views\Shared\_SystemMessagePlaceholder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

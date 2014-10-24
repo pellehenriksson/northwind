@@ -1,0 +1,22 @@
+﻿
+@using Northwind.Web.Infrastructure
+
+<script type="text/javascript" src="~/Scripts/northwind-systemmessage.js"></script>
+
+@if (TempData.ContainsKey(SystemMessage.Key))
+{
+    var message = (SystemMessage)TempData[SystemMessage.Key];
+    
+    <script type="text/javascript">
+        var x = new Northwind.Message("system-message-placeholder");
+        @if (message.Category == SystemMessage.MessageCategory.Error)
+        {
+            <text>x.showError('@message.Message');</text>
+        }
+        else if (message.Category == SystemMessage.MessageCategory.Success)
+        {
+            <text>x.showSuccess('@message.Message');</text>
+        }
+        
+    </script>
+}

@@ -80,6 +80,7 @@ namespace Northwind.Web
             kernel.Load(new CommonModule());
             kernel.Load(new ReadModule());
             kernel.Load(new WriteModule());
+            kernel.Load(new WebModule());
         }        
     }
 }

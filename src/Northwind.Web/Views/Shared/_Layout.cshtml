@@ -34,8 +34,11 @@
         </div>
     </div>
     
-    <div class="container body-content">
+    <div class="container">
+        
+        @Html.Partial("_SystemMessagePlaceholder")
         @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Northwind</p>
@@ -43,7 +46,11 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
+    
     @RenderSection("scripts", required: false)
+    
+    @Html.Partial("_SystemMessage")
 </body>
 </html>

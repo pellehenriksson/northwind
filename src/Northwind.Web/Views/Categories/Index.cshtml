@@ -8,6 +8,10 @@
 </div>
 
 <div class="row">
+    <a class="btn btn-default btn-primary pull-right" href="@Url.Action("Create")">New category</a>
+</div>
+
+<div class="row">
     <table class="table table-condensed table-hover">
         <thead>
             <tr>
@@ -22,7 +26,7 @@
                 <tr>
                     <td>@m.Name </td>
                     <td>@m.Description</td>
-                    <td><a class="btn btn-default" href="@Url.Action("Details", new {id = m.Id})">Details >></a></td>
+                    <td><a class="btn btn-default pull-right" href="@Url.Action("Change", new {id = m.Id})">Details >></a></td>
                 </tr>
             }
         </tbody>

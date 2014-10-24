@@ -54,6 +54,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\SharedAssemblyInfo.cs">
@@ -65,14 +66,19 @@
     <Compile Include="Infrastructure\Dependencies\ReadModule.cs" />
     <Compile Include="Infrastructure\Dependencies\WriteModule.cs" />
     <Compile Include="Read\CategoriesListQuery.cs" />
+    <Compile Include="Read\CategoryDetailsQuery.cs" />
     <Compile Include="Read\IPagedListResult.cs" />
     <Compile Include="Read\PagedCriteria.cs" />
     <Compile Include="Read\PagedListResult.cs" />
     <Compile Include="Read\EmployeeDetailsQuery.cs" />
     <Compile Include="Read\EmployeesListQuery.cs" />
     <Compile Include="Read\OrdersListQuery.cs" />
+    <Compile Include="Write\CommandHandlers\ChangeCategoryCommandHandler.cs" />
+    <Compile Include="Write\CommandHandlers\CreateCategoryCommandHandler.cs" />
     <Compile Include="Write\CommandInvoker.cs" />
     <Compile Include="Common\IAggregateRoot.cs" />
+    <Compile Include="Write\Commands\ChangeCategoryCommand.cs" />
+    <Compile Include="Write\Commands\CreateCategoryCommand.cs" />
     <Compile Include="Write\ICommandHandler.cs" />
     <Compile Include="Write\ICommandInvoker.cs" />
     <Compile Include="Read\IQuery.cs" />
@@ -111,10 +117,7 @@
     <Compile Include="Infrastructure\Persistance\NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Write\CommandHandlers\" />
-    <Folder Include="Write\Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Domain\_Domain.cd" />
     <None Include="packages.config" />

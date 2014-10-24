@@ -1,0 +1,25 @@
+﻿@model Northwind.Web.InputModels.CategoryInputModel
+
+@{
+    ViewBag.Title = "Category/" + Model.Name;
+}
+
+<div class="row">
+    <div class="page-header">
+        <h1>@Model.Name <small></small></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        @Html.ValidationSummary(true)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <form action="@Url.Action("Change")" method="post" class="form-horizontal" role="form">
+            @Html.Partial("_Form", Model)
+        </form>
+     </div>
+ </div>
