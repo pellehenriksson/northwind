@@ -1,9 +1,9 @@
 ﻿using NHibernate;
 
 using Northwind.Core.Domain;
-using Northwind.Core.Write.Commands;
+using Northwind.Write.Commands;
 
-namespace Northwind.Core.Write.CommandHandlers
+namespace Northwind.Write.CommandHandlers
 {
     public class ChangeProductNameCommandHandler : ICommandHandler<ChangeProductNameCommand>
     {

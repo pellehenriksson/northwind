@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{705C3EAC-7354-41C3-9929-7BB6F4669B67}</ProjectGuid>
+    <ProjectGuid>{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Northwind.Tests</RootNamespace>
-    <AssemblyName>Northwind.Tests</AssemblyName>
+    <RootNamespace>Northwind.Write</RootNamespace>
+    <AssemblyName>Northwind.Write</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,62 +30,50 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentNHibernate">
+    <Reference Include="FluentNHibernate, Version=1.4.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="HibernatingRhinos.Profiler.Appender.v4.0">
-      <HintPath>..\..\tools\HibernatingRhinos.Profiler.Appender.v4.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.3.0.0.0\lib\net45\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="NLog.Interface">
+    <Reference Include="NLog.Interface, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NLog.Interface.3.0.0\lib\net40\NLog.Interface.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="AbstractIntegrationTest.cs" />
-    <Compile Include="AbstractIntegrationTestWithData.cs" />
-    <Compile Include="Core\Domain\CategoryTests.cs" />
-    <Compile Include="Core\Domain\OrderTests.cs" />
-    <Compile Include="Core\Domain\PhonenumberTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\CategoryMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\CustomerMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\EmployeeMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\OrderMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\ProductMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\RegionMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\ShipperMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\SupplierMapTests.cs" />
-    <Compile Include="Core\Infrastructure\Persistance\Mappings\TerritoryMapTests.cs" />
-    <Compile Include="Read\CategoriesListQueryTests.cs" />
-    <Compile Include="Read\EmployeeDetailsQueryTests.cs" />
-    <Compile Include="Read\EmployeesListQueryTests.cs" />
-    <Compile Include="Read\OrdersListQueryTests.cs" />
-    <Compile Include="PullImagesFromOldSystem.cs" />
+    <Compile Include="CommandHandlers\ChangeCategoryCommandHandler.cs" />
+    <Compile Include="CommandHandlers\ChangeProductCategoryCommandHandler.cs" />
+    <Compile Include="CommandHandlers\ChangeProductNameCommandHandler.cs" />
+    <Compile Include="CommandHandlers\CreateCategoryCommandHandler.cs" />
+    <Compile Include="CommandInvoker.cs" />
+    <Compile Include="Commands\ChangeCategoryCommand.cs" />
+    <Compile Include="Commands\ChangeProductCategoryCommand.cs" />
+    <Compile Include="Commands\ChangeProductNameCommand.cs" />
+    <Compile Include="Commands\CreateCategoryCommand.cs" />
+    <Compile Include="ICommandHandler.cs" />
+    <Compile Include="ICommandInvoker.cs" />
+    <Compile Include="Infrastructure\WriteModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sandbox.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,16 +81,7 @@
       <Project>{19ada448-cea3-4230-8e44-18dce3a7faeb}</Project>
       <Name>Northwind.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Northwind.Read\Northwind.Read.csproj">
-      <Project>{3042322e-b85b-462b-ba33-533a83458c17}</Project>
-      <Name>Northwind.Read</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Northwind.Write\Northwind.Write.csproj">
-      <Project>{6bf68c48-8be6-451f-ba5d-ecc303d7aee2}</Project>
-      <Name>Northwind.Write</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

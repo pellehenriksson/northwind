@@ -258,6 +258,10 @@
       <Project>{3042322e-b85b-462b-ba33-533a83458c17}</Project>
       <Name>Northwind.Read</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Northwind.Write\Northwind.Write.csproj">
+      <Project>{6bf68c48-8be6-451f-ba5d-ecc303d7aee2}</Project>
+      <Name>Northwind.Write</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

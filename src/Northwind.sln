@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{65181A05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Read", "Northwind.Read\Northwind.Read.csproj", "{3042322E-B85B-462B-BA33-533A83458C17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Write", "Northwind.Write\Northwind.Write.csproj", "{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{3042322E-B85B-462B-BA33-533A83458C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3042322E-B85B-462B-BA33-533A83458C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3042322E-B85B-462B-BA33-533A83458C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +62,6 @@ Global
 		{19ADA448-CEA3-4230-8E44-18DCE3A7FAEB} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
 		{710E5588-0021-4AD4-90A3-E5C62F7D27B4} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
 		{3042322E-B85B-462B-BA33-533A83458C17} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
+		{6BF68C48-8BE6-451F-BA5D-ECC303D7AEE2} = {01F7D5BC-F84C-43C9-B0E3-8B9845F7D2E0}
 	EndGlobalSection
 EndGlobal

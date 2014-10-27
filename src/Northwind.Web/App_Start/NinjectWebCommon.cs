@@ -11,6 +11,7 @@ using Northwind.Core.Infrastructure.Dependencies;
 using Northwind.Read.Infrastructure;
 using Northwind.Web;
 using Northwind.Web.Infrastructure.Dependencies;
+using Northwind.Write.Infrastructure;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]

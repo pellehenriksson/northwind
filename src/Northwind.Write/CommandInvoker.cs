@@ -1,6 +1,6 @@
 ﻿using Ninject;
 
-namespace Northwind.Core.Write
+namespace Northwind.Write
 {
     public class CommandInvoker : ICommandInvoker
     {

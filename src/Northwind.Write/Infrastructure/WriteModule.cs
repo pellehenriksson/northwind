@@ -1,10 +1,12 @@
 ﻿using Ninject.Modules;
 
 using Northwind.Core.Common;
-using Northwind.Core.Write;
 
-namespace Northwind.Core.Infrastructure.Dependencies
+namespace Northwind.Write.Infrastructure
 {
+    /// <summary>
+    /// The write module.
+    /// </summary>
     public class WriteModule : NinjectModule
     {
         public override void Load()

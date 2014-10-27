@@ -1,4 +1,4 @@
-﻿namespace Northwind.Core.Write.Commands
+﻿namespace Northwind.Write.Commands
 {
     public class ChangeCategoryCommand
     {

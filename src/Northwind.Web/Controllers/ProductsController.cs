@@ -6,11 +6,11 @@ using NHibernate;
 using NHibernate.Linq;
 
 using Northwind.Core.Domain;
-using Northwind.Core.Write;
-using Northwind.Core.Write.Commands;
 using Northwind.Read;
 using Northwind.Web.InputModels;
 using Northwind.Web.ViewModels;
+using Northwind.Write;
+using Northwind.Write.Commands;
 
 namespace Northwind.Web.Controllers
 {
