@@ -1,17 +1,17 @@
 ﻿using System.Linq;
 
-using Northwind.Core.Read;
+using Northwind.Read;
 
 using Xunit;
 
-namespace Northwind.Tests.Core.Read
+namespace Northwind.Tests.Read
 {
     public class CategoriesListQueryTests : AbstractIntegrationTestWithData
     {
         [Fact]
         public void Should_Return_Page_List_Of_Categories()
         {
-            using (var session = SessionFactory.OpenStatelessSession())
+            using (var session = SessionFactory.OpenSession())
             {
                 var query = new CategoriesListQuery(session);
                 var criteria = new PagedCriteria { CurrentPage = 1, ItemsPerPage = 5 };

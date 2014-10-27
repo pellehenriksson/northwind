@@ -17,10 +17,6 @@ user:
 	can create new order
 	can se their old orders (list and detail)
 
-
-for simple crud-scenarios
-	- "crudcontroller"
-
 for workflows
 	- 
 

@@ -8,15 +8,15 @@ using NLog.Interface;
 
 using Northwind.Core.Domain;
 
-namespace Northwind.Core.Read
+namespace Northwind.Read
 {
     public class EmployeeDetailsQuery : IQuery<EmployeeDetailsQuery.Criteria, EmployeeDetailsQuery.Result>
     {
-        private readonly IStatelessSession session;
+        private readonly ISession session;
 
         private readonly ILogger logger;
 
-        public EmployeeDetailsQuery(IStatelessSession session, ILogger logger)
+        public EmployeeDetailsQuery(ISession session, ILogger logger)
         {
             this.session = session;
             this.logger = logger;

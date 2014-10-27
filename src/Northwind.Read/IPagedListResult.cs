@@ -1,4 +1,4 @@
-﻿namespace Northwind.Core.Read
+﻿namespace Northwind.Read
 {
     public interface IPagedListResult
     {

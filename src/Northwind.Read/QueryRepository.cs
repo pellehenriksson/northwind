@@ -2,7 +2,7 @@
 
 using Ninject;
 
-namespace Northwind.Core.Read
+namespace Northwind.Read
 {
     public class QueryRepository : IQueryRepository
     {

@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 
 using Northwind.Core.Domain;
-using Northwind.Core.Read;
 using Northwind.Core.Write;
 using Northwind.Core.Write.Commands;
+using Northwind.Read;
 using Northwind.Web.InputModels;
 
 namespace Northwind.Web.Controllers

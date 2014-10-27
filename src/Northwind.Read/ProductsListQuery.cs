@@ -5,13 +5,13 @@ using NHibernate.Linq;
 
 using Northwind.Core.Domain;
 
-namespace Northwind.Core.Read
+namespace Northwind.Read
 {
     public class ProductsListQuery : IQuery<PagedCriteria, PagedListResult<ProductsListQuery.Result>>
     {
-        private readonly IStatelessSession session;
+        private readonly ISession session;
 
-        public ProductsListQuery(IStatelessSession session)
+        public ProductsListQuery(ISession session)
         {
             this.session = session;
         }

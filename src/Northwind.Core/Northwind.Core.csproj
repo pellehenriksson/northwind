@@ -45,6 +45,9 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.3.0.0.0\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -63,18 +66,7 @@
     <Compile Include="Common\AppSettingsHelper.cs" />
     <Compile Include="Common\AssemblyExtensions.cs" />
     <Compile Include="Infrastructure\Dependencies\CommonModule.cs" />
-    <Compile Include="Infrastructure\Dependencies\ReadModule.cs" />
     <Compile Include="Infrastructure\Dependencies\WriteModule.cs" />
-    <Compile Include="Read\CategoriesListQuery.cs" />
-    <Compile Include="Read\CategoryDetailsQuery.cs" />
-    <Compile Include="Read\IPagedListResult.cs" />
-    <Compile Include="Read\PagedCriteria.cs" />
-    <Compile Include="Read\PagedListResult.cs" />
-    <Compile Include="Read\EmployeeDetailsQuery.cs" />
-    <Compile Include="Read\EmployeesListQuery.cs" />
-    <Compile Include="Read\OrdersListQuery.cs" />
-    <Compile Include="Read\ProductDetailsQuery.cs" />
-    <Compile Include="Read\ProductsListQuery.cs" />
     <Compile Include="Write\CommandHandlers\ChangeCategoryCommandHandler.cs" />
     <Compile Include="Write\CommandHandlers\ChangeProductCategoryCommandHandler.cs" />
     <Compile Include="Write\CommandHandlers\ChangeProductNameCommandHandler.cs" />
@@ -87,10 +79,7 @@
     <Compile Include="Write\Commands\CreateCategoryCommand.cs" />
     <Compile Include="Write\ICommandHandler.cs" />
     <Compile Include="Write\ICommandInvoker.cs" />
-    <Compile Include="Read\IQuery.cs" />
-    <Compile Include="Read\IQueryRepository.cs" />
     <Compile Include="Common\IValueObject.cs" />
-    <Compile Include="Read\QueryRepository.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Customer.cs" />

@@ -1,9 +1,8 @@
 ﻿using Ninject.Modules;
 
 using Northwind.Core.Common;
-using Northwind.Core.Read;
 
-namespace Northwind.Core.Infrastructure.Dependencies
+namespace Northwind.Read.Infrastructure
 {
     public class ReadModule : NinjectModule
     {

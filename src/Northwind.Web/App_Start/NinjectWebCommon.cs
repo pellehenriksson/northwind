@@ -8,6 +8,7 @@ using Ninject;
 using Ninject.Web.Common;
 
 using Northwind.Core.Infrastructure.Dependencies;
+using Northwind.Read.Infrastructure;
 using Northwind.Web;
 using Northwind.Web.Infrastructure.Dependencies;
 

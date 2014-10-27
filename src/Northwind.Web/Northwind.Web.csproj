@@ -169,7 +169,8 @@
     <Compile Include="InputModels\CategoryInputModel.cs" />
     <Compile Include="InputModels\ProductCategoryInputModel.cs" />
     <Compile Include="InputModels\ProductNameInputModel.cs" />
-    <Compile Include="InputValidators\CategoryInputModelValidator.cs" />
+    <Compile Include="InputModelValidators\CategoryInputModelValidator.cs" />
+    <Compile Include="InputModelValidators\ProductNameInputModelValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ProductDetailsViewModel.cs" />
   </ItemGroup>
@@ -252,6 +253,10 @@
     <ProjectReference Include="..\Northwind.Core\Northwind.Core.csproj">
       <Project>{19ada448-cea3-4230-8e44-18dce3a7faeb}</Project>
       <Name>Northwind.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Read\Northwind.Read.csproj">
+      <Project>{3042322e-b85b-462b-ba33-533a83458c17}</Project>
+      <Name>Northwind.Read</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

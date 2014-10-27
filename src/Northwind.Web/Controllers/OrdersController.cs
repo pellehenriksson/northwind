@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-using Northwind.Core.Read;
+using Northwind.Read;
 
 namespace Northwind.Web.Controllers
 {

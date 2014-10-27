@@ -2,7 +2,7 @@
 
 using Ninject.Modules;
 
-using Northwind.Web.InputValidators;
+using Northwind.Web.InputModelValidators;
 
 namespace Northwind.Web.Infrastructure.Dependencies
 {

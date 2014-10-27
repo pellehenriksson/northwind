@@ -6,13 +6,13 @@ using NHibernate.Linq;
 
 using Northwind.Core.Domain;
 
-namespace Northwind.Core.Read
+namespace Northwind.Read
 {
     public class OrdersListQuery : IQuery<OrdersListQuery.Criteria, PagedListResult<OrdersListQuery.Result>>
     {
-        private readonly IStatelessSession session;
+        private readonly ISession session;
 
-        public OrdersListQuery(IStatelessSession session)
+        public OrdersListQuery(ISession session)
         {
             this.session = session;
         }
@@ -29,7 +29,7 @@ namespace Northwind.Core.Read
             };
 
             var items =
-                this.session.Query<Domain.Order>()
+                this.session.Query<Core.Domain.Order>()
                     .Where(x => x.Employee.Id == criteria.EmployeeId)
                     .OrderByDescending(x => x.OrderDate)
                     .Select(x => new Result { OrderId = x.Id, OrderDate = x.OrderDate, CustomerName = x.Customer.Name })

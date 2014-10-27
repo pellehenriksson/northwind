@@ -1,32 +1,30 @@
-﻿using NHibernate;
+﻿using System.Linq;
+
+using NHibernate;
+using NHibernate.Linq;
 
 using Northwind.Core.Domain;
 
-namespace Northwind.Core.Read
+namespace Northwind.Read
 {
     public class CategoryDetailsQuery : IQuery<CategoryDetailsQuery.Criteria, CategoryDetailsQuery.Result>
     {
-        private readonly IStatelessSession session;
+        private readonly ISession session;
 
-        public CategoryDetailsQuery(IStatelessSession session)
+        public CategoryDetailsQuery(ISession session)
         {
             this.session = session;
         }
 
         public Result Load(Criteria criteria)
         {
-            var category = this.session.Get<Category>(criteria.CategoryId);
-            if (category == null)
-            {
-                return null;
-            }
-            
-            return new Result
-            {
-                Id = category.Id,
-                Name = category.Name,
-                Description = category.Description,
-            };
+            var category =
+                this.session.Query<Category>()
+                    .Where(x => x.Id == criteria.CategoryId)
+                    .Select(x => new Result { Id = x.Id, Name = x.Name, Description = x.Description })
+                    .SingleOrDefault();
+
+            return category;
         }
         
         public class Criteria

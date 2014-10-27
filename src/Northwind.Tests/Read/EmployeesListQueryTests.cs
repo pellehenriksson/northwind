@@ -1,17 +1,17 @@
 ﻿using System.Linq;
 
-using Northwind.Core.Read;
+using Northwind.Read;
 
 using Xunit;
 
-namespace Northwind.Tests.Core.Read
+namespace Northwind.Tests.Read
 {
     public class EmployeesListQueryTests : AbstractIntegrationTestWithData
     {
         [Fact]
         public void Should_Return_Paged_List_Of_Employees()
         {
-            using (var session = SessionFactory.OpenStatelessSession())
+            using (var session = SessionFactory.OpenSession())
             {
                 var query = new EmployeesListQuery(session, this.Logger);
                 var criteria = new EmployeesListQuery.Criteria { CurrentPage = 1, ItemsPerPage = 50 };

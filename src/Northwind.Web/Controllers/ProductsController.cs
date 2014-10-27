@@ -6,9 +6,9 @@ using NHibernate;
 using NHibernate.Linq;
 
 using Northwind.Core.Domain;
-using Northwind.Core.Read;
 using Northwind.Core.Write;
 using Northwind.Core.Write.Commands;
+using Northwind.Read;
 using Northwind.Web.InputModels;
 using Northwind.Web.ViewModels;
 

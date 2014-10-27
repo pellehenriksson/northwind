@@ -4,6 +4,7 @@ using NHibernate;
 
 using Ninject;
 using Ninject.Modules;
+using Ninject.Web.Common;
 
 using NLog;
 using NLog.Interface;
@@ -27,10 +28,10 @@ namespace Northwind.Core.Infrastructure.Dependencies
 
             this.Bind<ISessionFactory>().ToConstant(helper.SessionFactory).InSingletonScope();
             
-            this.Bind<ISession>().ToMethod(x => x.Kernel.Get<ISessionFactory>().OpenSession());
+            this.Bind<ISession>().ToMethod(x => x.Kernel.Get<ISessionFactory>().OpenSession()).InRequestScope();
 
-            this.Bind<IStatelessSession>().ToMethod(x => x.Kernel.Get<ISessionFactory>().OpenStatelessSession());
-            
+            this.Bind<IStatelessSession>().ToMethod(x => x.Kernel.Get<ISessionFactory>().OpenStatelessSession()).InRequestScope();
+
             this.Bind<ILogger>().ToMethod(x => new LoggerAdapter(LogManager.GetLogger(x.Request.Target.Member.DeclaringType.FullName)));
         }
     }

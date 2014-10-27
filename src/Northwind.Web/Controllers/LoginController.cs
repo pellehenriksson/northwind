@@ -11,9 +11,9 @@ namespace Northwind.Web.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly IStatelessSession session;
-        
-        public LoginController(IStatelessSession session)
+        private readonly ISession session;
+
+        public LoginController(ISession session)
         {
             this.session = session;
         }
