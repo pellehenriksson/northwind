@@ -26,7 +26,13 @@ namespace Northwind.Web
              url: "Categories/Page/{page}",
              defaults: new { controller = "Categories", action = "Index", page = 1 },
              constraints: new { page = @"\d+" });
-            
+
+            routes.MapRoute(
+               name: "Products",
+               url: "Products/Page/{page}",
+               defaults: new { controller = "Products", action = "Index", page = 1 },
+               constraints: new { page = @"\d+" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

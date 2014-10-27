@@ -37,11 +37,21 @@
 
         public virtual void ChangeName(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new DomainRuleException("Invalid name");
+            }
+
             this.Name = name;
         }
 
         public virtual void ChangeCategory(Category category)
         {
+            if (category == null)
+            {
+                throw new DomainRuleException("No category provided");
+            }
+
             this.Category = category;
         }
 

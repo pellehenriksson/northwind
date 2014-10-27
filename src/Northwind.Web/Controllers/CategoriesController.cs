@@ -24,7 +24,7 @@ namespace Northwind.Web.Controllers
         [HttpGet]
         public ActionResult Index(int page = 1)
         {
-            var criteria = new PagedCriteria { CurrentPage = 1, ItemsPerPage = 15 };
+            var criteria = new PagedCriteria { CurrentPage = page, ItemsPerPage = 15 };
             var model = this.queryRepository.Load<PagedCriteria, PagedListResult<CategoriesListQuery.Result>>(criteria);
 
             return this.View(model);
@@ -55,7 +55,7 @@ namespace Northwind.Web.Controllers
             }
             catch (DomainRuleException dex)
             {
-                this.ModelState.AddModelError("domain-rule", dex.Message);
+                this.ModelState.AddModelError(string.Empty, dex.Message);
                 return this.View(model);
             }
         }
@@ -95,16 +95,9 @@ namespace Northwind.Web.Controllers
             }
             catch (DomainRuleException dex)
             {
-                this.ModelState.AddModelError("domain-rule", dex.Message);
+                this.ModelState.AddModelError(string.Empty, dex.Message);
                 return this.View(model);
             }
         }
     }
 }
-
-/*
-    display success message
-    display domain rule exceptions
-    redirect to error page
-   
-*/

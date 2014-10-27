@@ -4,6 +4,7 @@ using Northwind.Core.Read;
 
 namespace Northwind.Web.Controllers
 {
+    [Authorize(Roles = "Manager")]
     public class EmployeesController : AbstractApplicationController
     {
         private readonly IQueryRepository queryRepository;

@@ -1,0 +1,45 @@
+﻿@model Northwind.Web.ViewModels.ProductDetailsViewModel
+
+@{
+    ViewBag.Title = "Product/" + Model.Name;
+}
+
+<div class="row">
+    <div class="page-header">
+        <h1>@Model.Name <small></small></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>@Model.Name</h4>
+        <p><a class="btn btn-default btn-sm" href="@Url.Action("ChangeName", new { Id = Model.Id })">Change name</a></p>
+    </div>
+    <div class="col-md-4">
+        <h4>@Model.Category</h4>
+        <p><a class="btn btn-default btn-sm" href="@Url.Action("ChangeCategory", new { Id = Model.Id })">Change category</a></p>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h4>@Model.ReorderLevel</h4>
+        <p><a class="btn btn-default btn-sm" href="@Url.Action("ChangeReorderLevel", new { Id = Model.Id })">Change reorder level</a></p>
+    </div>
+    <div class="col-md-4">
+        <h4>@Model.Price.ToString("N") @Model.Currency</h4>
+        <p><a class="btn btn-default btn-sm" href="@Url.Action("ChangePrice", new { Id = Model.Id })">Change price</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h4>@Html.Partial("_Status", Model.Discontinued)</h4>
+        @if (!Model.Discontinued)
+        {
+            <a class="btn btn-default btn-danger btn-sm">Disontinue this item</a>
+        }
+    </div>
+</div>

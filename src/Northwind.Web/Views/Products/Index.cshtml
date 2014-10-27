@@ -1,0 +1,43 @@
+﻿@model Northwind.Core.Read.PagedListResult<Northwind.Core.Read.ProductsListQuery.Result>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<div class="page-header">
+    <h1>Products <small>manage your products</small></h1>
+</div>
+
+<div class="row">
+    <a class="btn btn-default btn-primary pull-right" href="@Url.Action("Create")">New product</a>
+</div>
+
+<div class="row">
+    <table class="table table-condensed table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Supplier</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.Items)
+            {
+                <tr>
+                    <th>@Html.Partial("_Status", m.Discontinued)</th>
+                    <td>@m.Name </td>
+                    <td>@m.Category</td>
+                    <td>@m.Supplier</td>
+                    <td>@m.Price.ToString("N") @m.Currency </td>
+                    <td><a class="btn btn-default pull-right" href="@Url.Action("Details", new {id = m.Id})">Details >></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@Html.Partial("_PagingWidget")

@@ -5,13 +5,13 @@
     if (User.IsInRole(NorthwindUserRoles.Manager))
     {
         <li><a href="@Url.Action("Index", "Categories")">Categories</a></li>
+        <li><a href="@Url.Action("Index", "Products")">Products</a></li>
+        <li><a href="@Url.Action("Index", "Employees")">Employees</a></li>
     }
 
     if (User.IsInRole(NorthwindUserRoles.User))
     {
         <li><a href="@Url.Action("Index", "Orders")">Orders</a></li>
     }
-
-    <li><a href="@Url.Action("Index", "Employees")">Employees</a></li>
 }
    
